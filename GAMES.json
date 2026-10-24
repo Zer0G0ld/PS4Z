@@ -10,6 +10,16 @@
       "min_fw": "9.50",
       "cover_url": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/store/software/switch/70010000095084/7ef29361c83a4952a12fa3c0d868c2010315682eb9b34f1bbaa5a542acf93623"
     },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Stardew-Valley.pkg": {
+      "title_id": "CUSA06840",
+      "region": "USA",
+      "name": "Stardew Valley",
+      "size": 358088704,
+      "version": "1.62",
+      "release": "11-15-2016",
+      "min_fw": "5.05",
+      "cover_url": "https://image.api.playstation.com/cdn/UP4483/CUSA06840_00/4K1q4w9x6y8z1v2u3t4s5r6q7p8o9n0m1l2k3j4h5g6f7d8s9a.jpg"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FPKGi_v1.10.0-release.pkg": {
       "title_id": "LAPY20001",
       "region": "APP",
@@ -20,7 +30,7 @@
       "min_fw": "5.05",
       "cover_url": "src/assets/fpkgi.png"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Xplorer 2.0 (LAPY20009) - 2.08.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Xplorer-2.08.pkg": {
       "title_id": "LAPY20009",
       "region": "APP",
       "name": "PS4-Xplorer 2.0 (Gerenciador de Arquivos)",
