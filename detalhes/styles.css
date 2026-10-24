@@ -1,0 +1,68 @@
+.detalhes-container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.detalhes-capa {
+    width: 45%;
+    object-fit: cover;
+    background: #121212;
+}
+
+.detalhes-info {
+    padding: 40px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalhes-info h1 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+    text-shadow: none;
+}
+
+.meta-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+    background: #333;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.btn-voltar:hover, .btn-voltar:focus {
+    background: #444;
+    outline: 3px solid white;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .detalhes-container { flex-direction: column; }
+    .detalhes-capa { width: 100%; height: 400px; }
+    .detalhes-info { width: 100%; padding: 20px; }
+}

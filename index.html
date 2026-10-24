@@ -4,280 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zer0 Loja PS4</title>
-    <style>
-        :root {
-            --ps-blue: #0070d1;
-            --ps-blue-hover: #005bb5;
-            --bg-dark: #0f0f11;
-            --card-bg: rgba(30, 30, 30, 0.85);
-            --text-light: #ffffff;
-            --text-muted: #aaaaaa;
-        }
-
-        body {
-            background: radial-gradient(circle at top, #1a1a24 0%, var(--bg-dark) 100%);
-            color: var(--text-light);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-            width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 20px;
-        }
-
-        h1 { 
-            color: var(--text-light); 
-            margin: 0 0 10px 0; 
-            font-size: 2.5em; 
-            text-transform: uppercase; 
-            letter-spacing: 3px;
-            text-shadow: 0 0 15px rgba(0, 112, 209, 0.5);
-        }
-        
-        p.subtitle { color: var(--text-muted); margin: 0; font-size: 1.1em; }
-
-        /* Barra de Pesquisa */
-        .search-container {
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 30px;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 15px 20px;
-            border-radius: 30px;
-            border: 2px solid #333;
-            background-color: #1a1a1a;
-            color: white;
-            font-size: 1.1em;
-            box-sizing: border-box;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .search-input:focus {
-            border-color: var(--ps-blue);
-            box-shadow: 0 0 15px rgba(0, 112, 209, 0.3);
-        }
-
-        .loja-container { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 25px; 
-            max-width: 1300px; 
-            width: 100%; 
-        }
-
-        /* Card do Jogo */
-        .game-card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            width: 280px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .game-card:hover, .game-card:focus-within {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 112, 209, 0.2);
-            border-color: rgba(0, 112, 209, 0.5);
-        }
-
-        .cover-wrapper {
-            width: 100%;
-            height: 350px;
-            background: linear-gradient(135deg, #1f1f1f 0%, #121212 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .game-cover { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            transition: transform 0.3s ease;
-        }
-
-        .game-card:hover .game-cover {
-            transform: scale(1.05);
-        }
-
-        .game-info { 
-            padding: 20px; 
-            display: flex; 
-            flex-direction: column; 
-            flex-grow: 1; 
-            justify-content: space-between; 
-            background: linear-gradient(to top, #181818 0%, transparent 100%);
-        }
-
-        .game-title { 
-            font-size: 1.2em; 
-            font-weight: 700; 
-            margin-bottom: 8px; 
-            text-align: center; 
-            line-height: 1.3;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-        }
-        
-        .game-size { 
-            font-size: 0.9em; 
-            color: var(--text-muted); 
-            text-align: center; 
-            margin-bottom: 20px; 
-            background: rgba(255,255,255,0.05);
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            align-self: center;
-        }
-
-        .download-btn {
-            background-color: var(--ps-blue);
-            color: white;
-            padding: 14px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            text-align: center;
-            transition: background-color 0.2s, transform 0.1s;
-            outline: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .download-btn:hover, .download-btn:focus { 
-            background-color: var(--ps-blue-hover); 
-            outline: 3px solid white; 
-            transform: translateY(-2px);
-        }
-
-        /* Mensagens de Status */
-        #loading { 
-            color: var(--ps-blue); 
-            font-size: 1.2em; 
-            font-weight: bold; 
-            margin-top: 50px;
-        }
-
-        .erro-msg { color: #ff4444 !important; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
+        <!-- Botão de Desbloqueio adicionado aqui -->
+        <div style="position: absolute; top: 20px; right: 20px;">
+            <a href="jb.html" style="background: #e63946; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1em; box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4); transition: 0.2s;">⚡ Desbloquear PS4</a>
+        </div>
+        
         <h1>Zer0 Loja PS4</h1>
         <p class="subtitle">A sua biblioteca de jogos desbloqueada</p>
     </header>
 
     <div class="search-container">
-        <input type="text" id="busca" class="search-input" placeholder="🔍 Digite o nome do jogo para buscar...">
+        <input type="text" id="busca" class="search-input" placeholder="Digite o nome do jogo para buscar...">
     </div>
 
     <div id="loading">Carregando catálogo...</div>
     <div class="loja-container" id="lista-jogos"></div>
 
-    <script>
-        // Variável global para guardar os jogos e permitir a busca
-        let todosOsJogos = [];
-
-        function formatarTamanho(bytes) {
-            if (!bytes) return "Tamanho Desconhecido";
-            const gb = bytes / (1024 * 1024 * 1024);
-            return gb.toFixed(2) + " GB";
-        }
-
-        // Função para renderizar os cards baseados na lista filtrada
-        function renderizarJogos(jogosParaMostrar) {
-            const container = document.getElementById('lista-jogos');
-            container.innerHTML = ''; // Limpa a tela
-
-            if (jogosParaMostrar.length === 0) {
-                container.innerHTML = '<p style="color: #aaa; margin-top: 20px;">Nenhum jogo encontrado com esse nome.</p>';
-                return;
-            }
-
-            jogosParaMostrar.forEach(jogo => {
-                const imagemCapa = jogo.cover_url || '';
-                
-                // Se a imagem não existir ou der erro, usamos um background elegante e um ícone no centro
-                const htmlCapa = imagemCapa 
-                    ? `<img src="${imagemCapa}" alt="Capa de ${jogo.name}" class="game-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'display:flex; align-items:center; justify-content:center; height:100%; color:#0070d1; font-size:4em; font-weight:bold; opacity:0.3\\'>🎮</div>'">`
-                    : `<div style="display:flex; align-items:center; justify-content:center; height:100%; color:#0070d1; font-size:4em; opacity:0.3;">🎮</div>`;
-
-                const cardHTML = `
-                    <div class="game-card">
-                        <div class="cover-wrapper">
-                            ${htmlCapa}
-                        </div>
-                        <div class="game-info">
-                            <div>
-                                <div class="game-title">${jogo.name}</div>
-                                <div style="text-align:center;"><span class="game-size">${formatarTamanho(jogo.size)}</span></div>
-                            </div>
-                            <a href="${jogo.link}" class="download-btn" download target="_blank">Baixar Jogo</a>
-                        </div>
-                    </div>
-                `;
-                
-                container.innerHTML += cardHTML;
-            });
-        }
-
-        async function carregarJogos() {
-            try {
-                const resposta = await fetch('GAMES.json');
-                if (!resposta.ok) throw new Error("Arquivo GAMES.json não encontrado.");
-                
-                const json = await resposta.json();
-                const dadosJogos = json.DATA;
-
-                // Transforma o objeto JSON em um Array para facilitar a busca
-                todosOsJogos = Object.keys(dadosJogos).map(link => {
-                    return { ...dadosJogos[link], link: link };
-                });
-
-                // Esconde o loading
-                document.getElementById('loading').style.display = 'none';
-
-                // Renderiza todos os jogos na tela inicial
-                renderizarJogos(todosOsJogos);
-
-                // Lógica da Barra de Busca
-                document.getElementById('busca').addEventListener('input', (e) => {
-                    const termo = e.target.value.toLowerCase();
-                    const filtrados = todosOsJogos.filter(jogo => 
-                        jogo.name.toLowerCase().includes(termo)
-                    );
-                    renderizarJogos(filtrados);
-                });
-
-            } catch (erro) {
-                console.error(erro);
-                const loading = document.getElementById('loading');
-                loading.innerHTML = "Erro ao carregar o catálogo. Verifique o arquivo GAMES.json.";
-                loading.classList.add('erro-msg');
-            }
-        }
-
-        carregarJogos();
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
