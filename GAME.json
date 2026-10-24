@@ -1,6 +1,6 @@
 {
   "DATA": {
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/blob/main/Bendy-and-The-Dark-Revival.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Bendy-and-The-Dark-Revival.pkg": {
       "title_id": "CUSA38355",
       "region": "EUR",
       "name": "Bendy and The Dark Revival",
@@ -12,4 +12,3 @@
     }
   }
 }
-
