@@ -19,11 +19,25 @@
     </header>
 
     <div class="search-container">
-        <input type="text" id="busca" class="search-input" placeholder="Digite o nome do jogo para buscar...">
+        <input type="text" id="busca" class="search-input" placeholder="🔍 Digite o nome do jogo para buscar...">
+        
+        <!-- NOVOS BOTÕES DE FILTRO -->
+        <div class="filtros-container">
+            <button class="filtro-btn active" data-filtro="todos">Tudo</button>
+            <button class="filtro-btn" data-filtro="jogos">🎮 Jogos</button>
+            <button class="filtro-btn" data-filtro="apps">⚙️ Ferramentas</button>
+        </div>
     </div>
 
     <div id="loading">Carregando catálogo...</div>
+
+    <!-- Área de Jogos -->
+    <h2 class="section-title" id="titulo-jogos" style="display: none; width: 100%; text-align: left; max-width: 1300px; margin-bottom: 15px; color: var(--ps-blue);">🎮 Jogos</h2>
     <div class="loja-container" id="lista-jogos"></div>
+
+    <!-- Área de Ferramentas e Apps -->
+    <h2 class="section-title" id="titulo-apps" style="display: none; width: 100%; text-align: left; max-width: 1300px; margin-bottom: 15px; color: var(--ps-blue);">⚙️ Ferramentas do Sistema</h2>
+    <div class="loja-container" id="lista-apps" style="margin-bottom: 40px;"></div>
 
     <script src="script.js"></script>
 

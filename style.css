@@ -188,3 +188,43 @@ p.subtitle { color: var(--text-muted); margin: 0; font-size: 1.1em; }
     outline: 3px solid white; /* Borda que aparece ao navegar com o controle */
     transform: scale(1.05);
 }
+
+/* Estilos para os Filtros */
+.filtros-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.filtro-btn {
+    background-color: #1e1e1e;
+    color: var(--text-muted);
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.filtro-btn:hover {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+/* Estilo do botão que está selecionado */
+.filtro-btn.active {
+    background-color: var(--ps-blue);
+    color: white;
+    border-color: var(--ps-blue);
+}
+
+/* Borda de foco para navegar com o controle do PS4 */
+.filtro-btn:focus {
+    outline: 3px solid white;
+    border-color: white;
+}
