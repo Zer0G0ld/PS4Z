@@ -3,84 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Loja PS4</title>
+    <title>Zer0 Loja PS4</title>
     <style>
+        :root {
+            --ps-blue: #0070d1;
+            --ps-blue-hover: #005bb5;
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #ffffff;
+            --text-muted: #aaaaaa;
+        }
+
         body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-        }
-        h1 {
-            color: #0070d1; /* Azul PlayStation */
-            margin-bottom: 10px;
-        }
-        p {
-            color: #aaaaaa;
-            margin-bottom: 30px;
-        }
-        .game-card {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px auto;
-            max-width: 500px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .game-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
         }
+
+        h1 { color: var(--ps-blue); margin: 0 0 10px 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
+        p.subtitle { color: var(--text-muted); margin: 0; font-size: 1.1em; }
+
+        .loja-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; width: 100%; }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .game-card:hover, .game-card:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 112, 209, 0.3);
+            border-color: var(--ps-blue);
+        }
+
+        .game-cover { width: 100%; height: 350px; object-fit: cover; background-color: #000; border-bottom: 1px solid #333; }
+        .game-info { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+        .game-title { font-size: 1.1em; font-weight: bold; margin-bottom: 5px; text-align: center; }
+        .game-size { font-size: 0.85em; color: var(--text-muted); text-align: center; margin-bottom: 15px; }
+
         .download-btn {
-            background-color: #0070d1;
+            background-color: var(--ps-blue);
             color: white;
-            padding: 12px 24px;
+            padding: 12px;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 6px;
             font-weight: bold;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            width: 80%;
-            box-sizing: border-box;
+            font-size: 1em;
+            text-align: center;
+            transition: background-color 0.2s;
+            outline: none;
         }
-        .download-btn:hover, .download-btn:focus {
-            background-color: #005bb5;
-            outline: 2px solid white; /* Ajuda a ver onde o controle está no PS4 */
-        }
+
+        .download-btn:hover, .download-btn:focus { background-color: var(--ps-blue-hover); outline: 3px solid white; }
+        
+        /* Mensagem de Carregando */
+        #loading { color: var(--ps-blue); font-size: 1.2em; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <h1>Zer0 Loja PS4</h1>
-    <p>Selecione um jogo para baixar</p>
+    <header>
+        <h1>Zer0 Loja PS4</h1>
+        <p class="subtitle">Navegue com o controle e escolha seu jogo</p>
+    </header>
 
-    <h3>Funciona</h3>
-    <div class="game-card">
-        <div class="game-title">Bendy and The Dark Revival</div>
-        <a href="https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Bendy-and-The-Dark-Revival.pkg" class="download-btn" download target="_blank">Baixar Jogo</a>
-    </div>
+    <!-- Mensagem que aparece enquanto o JSON não carrega -->
+    <div id="loading">Carregando catálogo...</div>
 
-  <h3>Não funciona</h3>
+    <!-- Aqui o JavaScript vai injetar os cards -->
+    <div class="loja-container" id="lista-jogos"></div>
 
-    <!-- MODELO DE JOGO 1 -->
-    <div class="game-card">
-        <div class="game-title">Nome do Jogo 1 (Ex: God of War)</div>
-        <!-- Troque "NOME_DO_ARQUIVO.pkg" pelo nome exato do seu arquivo -->
-        <a href="NOME_DO_ARQUIVO.pkg" class="download-btn" download target="_blank">Baixar Jogo</a>
-    </div>
+    <script>
+        // Função que transforma bytes em GB legível (ex: 3939893248 -> "3.67 GB")
+        function formatarTamanho(bytes) {
+            if (!bytes) return "Tamanho Desconhecido";
+            const gb = bytes / (1024 * 1024 * 1024);
+            return gb.toFixed(2) + " GB";
+        }
 
-    <!-- MODELO DE JOGO 2 -->
-    <div class="game-card">
-        <div class="game-title">Nome do Jogo 2 (Ex: Spider-Man)</div>
-        <!-- Troque "OUTRO_JOGO.pkg" pelo nome exato do seu arquivo -->
-        <a href="OUTRO_JOGO.pkg" class="download-btn" download target="_blank">Baixar Jogo</a>
-    </div>
+        // Função principal que busca o JSON e cria os cards
+        async function carregarJogos() {
+            try {
+                // Procura o arquivo GAMES.json na mesma pasta do index.html
+                const resposta = await fetch('GAMES.json');
+                
+                if (!resposta.ok) throw new Error("Arquivo GAMES.json não encontrado.");
+                
+                const json = await resposta.json();
+                const container = document.getElementById('lista-jogos');
+                const loading = document.getElementById('loading');
+                
+                // Remove a mensagem de carregando
+                loading.style.display = 'none';
+
+                // O FPKGi usa a estrutura { "DATA": { "link": { "nome": "...", etc } } }
+                const dadosJogos = json.DATA;
+
+                // Transforma o objeto em uma lista e percorre cada jogo
+                Object.keys(dadosJogos).forEach(link => {
+                    const jogo = dadosJogos[link];
+                    
+                    // Define uma capa padrão caso o JSON não tenha cover_url
+                    const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/280x350/1e1e1e/0070d1?text=Sem+Capa';
+
+                    const cardHTML = `
+                        <div class="game-card">
+                            <img src="${imagemCapa}" alt="Capa de ${jogo.name}" class="game-cover" onerror="this.src='https://via.placeholder.com/280x350/1e1e1e/0070d1?text=Erro+na+Capa'">
+                            <div class="game-info">
+                                <div>
+                                    <div class="game-title">${jogo.name}</div>
+                                    <div class="game-size">${formatarTamanho(jogo.size)}</div>
+                                </div>
+                                <a href="${link}" class="download-btn" download target="_blank">Baixar Jogo</a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    container.innerHTML += cardHTML;
+                });
+
+            } catch (erro) {
+                console.error(erro);
+                document.getElementById('loading').innerHTML = "Erro ao carregar o catálogo. Verifique se o GAMES.json existe.";
+                document.getElementById('loading').style.color = "#ff4444"; // Vermelho para erro
+            }
+        }
+
+        // Inicia a função
+        carregarJogos();
+    </script>
 
 </body>
 </html>
