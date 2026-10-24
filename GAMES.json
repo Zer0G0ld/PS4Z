@@ -18,7 +18,17 @@
       "version": "1.62",
       "release": "11-15-2016",
       "min_fw": "5.05",
-      "cover_url": "https://image.api.playstation.com/cdn/UP4483/CUSA06840_00/4K1q4w9x6y8z1v2u3t4s5r6q7p8o9n0m1l2k3j4h5g6f7d8s9a.jpg"
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_yN9igNIisc73z6L0fGdygzj2gO7AVqHwQTNUScpCkQE4S5kEggWaLPU&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Subnautica.pkg": {
+      "title_id": "CUSA13529",
+      "region": "USA",
+      "name": "Subnautica",
+      "size": 2905407488,
+      "version": "1.21",
+      "release": "12-04-2018",
+      "min_fw": "5.05",
+      "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202103/1000/ajXEVMJhzxXuOezVXR6bFOkK.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FPKGi_v1.10.0-release.pkg": {
       "title_id": "LAPY20001",
