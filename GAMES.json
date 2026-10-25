@@ -70,7 +70,7 @@
       "min_fw": "5.05",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/627270/header.jpg?t=1745536404"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/It Takes Two.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/It%20Takes%20Two.pkg": {
       "title_id": "CUSA16746",
       "region": "EUR",
       "name": "It Takes Two",
@@ -80,7 +80,7 @@
       "min_fw": "5.05",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1426210/header_brazilian.jpg?t=1777395376"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/STREET FIGHTER IV.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/STREET%20FIGHTER%20IV.pkg": {
       "title_id": "CUSA01839",
       "region": "EUR",
       "name": "Street Fighter IV",
@@ -118,17 +118,127 @@
       "version": "1.10.0",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/fpkgi.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/FPKGi_v1.10.0-release.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Xplorer-2.08.pkg": {
       "title_id": "LAPY20009",
       "region": "APP",
-      "name": "PS4-Xplorer 2.0 (Gerenciador de Arquivos)",
+      "name": "PS4-Xplorer 2.0",
       "size": 66904064,
       "version": "2.08",
       "release": "2026",
       "min_fw": "4.55",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/ps4xplorer.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Xplorer.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/YouTube.pkg": {
+      "title_id": "CUSA01116",
+      "region": "APP",
+      "name": "YouTube (NoPSN)",
+      "size": 137130000,
+      "version": "2.32",
+      "release": "2022",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Youtube.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Netflix.pkg": {
+      "title_id": "CUSA00127",
+      "region": "APP",
+      "name": "Netflix (NoPSN)",
+      "size": 61060000,
+      "version": "1.53",
+      "release": "2021",
+      "min_fw": "9.00",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/netflix.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Apollo-Save-Tool.pkg": {
+      "title_id": "APOL00004",
+      "region": "APP",
+      "name": "Apollo Save Tool",
+      "size": 22675000,
+      "version": "2.3.2",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Apollo-Save-Tool.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Cheats-Manager.pkg": {
+      "title_id": "CHTM00777",
+      "region": "APP",
+      "name": "Cheats Manager",
+      "size": 19200000,
+      "version": "1.2.2",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Cheats.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Homebrew-Store.pkg": {
+      "title_id": "LAPY20015",
+      "region": "APP",
+      "name": "Homebrew Store",
+      "size": 54790000,
+      "version": "1.02",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Store-R2.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Icon-Mask.pkg": {
+      "title_id": "LAPY20007",
+      "region": "APP",
+      "name": "Icon Mask",
+      "size": 74040000,
+      "version": "1.16",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Icon-Mask.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Itemzflow-Game-Manager.pkg": {
+      "title_id": "ITEM00001",
+      "region": "APP",
+      "name": "Itemzflow Game Manager",
+      "size": 27120000,
+      "version": "1.08",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/itemzflow.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Temperature.pkg": {
+      "title_id": "LAPY20006",
+      "region": "APP",
+      "name": "PS4 Temperature",
+      "size": 50330000,
+      "version": "1.07",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Temperature.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Remote-Package-Installer.pkg": {
+      "title_id": "LAPY20003",
+      "region": "APP",
+      "name": "Remote Package Installer",
+      "size": 4260000,
+      "version": "1.02",
+      "release": "2022",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Remote-Package-Installer.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Avatar-Changer.pkg": {
+      "title_id": "LAPY20002",
+      "region": "APP",
+      "name": "Avatar Changer",
+      "size": 88000000,
+      "version": "1.00",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Avatar-Changer.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/ezremote_client_v2.05.pkg": {
+      "title_id": "LAPY20008",
+      "region": "APP",
+      "name": "ezRemote Client",
+      "size": 52750000,
+      "version": "2.05",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/ezRemoteClient.png"
     }
   }
 }
