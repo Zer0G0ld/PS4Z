@@ -30,6 +30,86 @@
       "min_fw": "5.05",
       "cover_url": "https://image.api.playstation.com/vulcan/ap/rnd/202103/1000/ajXEVMJhzxXuOezVXR6bFOkK.png"
     },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/INSIDE.pkg": {
+      "title_id": "CUSA02754",
+      "region": "EUR",
+      "name": "INSIDE",
+      "size": 1181286400,
+      "version": "1.01",
+      "release": "06-29-2016",
+      "min_fw": "5.05",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbyZP98PXkMkPXBUkQmp3j6KwXlTONYDzePNItDidVYg&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Inside-My-Radio.pkg": {
+      "title_id": "CUSA03871",
+      "region": "USA",
+      "name": "Inside My Radio",
+      "size": 961937408,
+      "version": "1.00",
+      "release": "11-17-2015",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/357720/header.jpg?t=1772804658"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Inscryption.pkg": {
+      "title_id": "CUSA32884",
+      "region": "EUR",
+      "name": "Inscryption",
+      "size": 2387148800,
+      "version": "1.02",
+      "release": "08-30-2022",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1092790/header.jpg?t=1777572925"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Injustice-2.pkg": {
+      "title_id": "CUSA10688",
+      "region": "EUR",
+      "name": "Injustice 2",
+      "size": 27393654784,
+      "version": "1.04",
+      "release": "05-16-2017",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/627270/header.jpg?t=1745536404"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/It Takes Two.pkg": {
+      "title_id": "CUSA16746",
+      "region": "EUR",
+      "name": "It Takes Two",
+      "size": 36243636224,
+      "version": "1.03",
+      "release": "03-26-2021",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1426210/header_brazilian.jpg?t=1777395376"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/STREET FIGHTER IV.pkg": {
+      "title_id": "CUSA01839",
+      "region": "EUR",
+      "name": "Street Fighter IV",
+      "size": 8547663872,
+      "version": "1.07",
+      "release": "02-17-2015",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/21660/header.jpg?t=1644282876"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/The-King-of-Fighters-2002-Unlimited-Match.pkg": {
+      "title_id": "CUSA18001",
+      "region": "USA",
+      "name": "The King of Fighters 2002 Unlimited Match",
+      "size": 588800000,
+      "version": "1.00",
+      "release": "05-07-2019",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/222440/header.jpg?t=1775107293"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Marvels-Spider-Man.pkg": {
+      "title_id": "CUSA02299",
+      "region": "USA",
+      "name": "Marvel's Spider-Man",
+      "size": 63854608384,
+      "version": "1.19",
+      "release": "09-07-2018",
+      "min_fw": "6.72",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817070/header.jpg?t=1771843630"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FPKGi_v1.10.0-release.pkg": {
       "title_id": "LAPY20001",
       "region": "APP",
@@ -38,7 +118,7 @@
       "version": "1.10.0",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "src/assets/fpkgi.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/fpkgi.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Xplorer-2.08.pkg": {
       "title_id": "LAPY20009",
@@ -48,7 +128,7 @@
       "version": "2.08",
       "release": "2026",
       "min_fw": "4.55",
-      "cover_url": "src/assets/ps4xplorer.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/ps4xplorer.png"
     }
   }
 }
