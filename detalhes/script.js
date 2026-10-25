@@ -8,9 +8,18 @@ async function carregarDetalhes() {
     }
 
     try {
-        // Usa a função global para buscar os dados
-        const listaJogos = await buscarDadosJogos(); 
+        // Busca o JSON subindo um nível (para achar a raiz do projeto)
+        const resposta = await fetch('../GAMES.json');
+        if (!resposta.ok) throw new Error("Arquivo GAMES.json não encontrado.");
         
+        const json = await resposta.json();
+        const dadosJogos = json.DATA;
+        
+        // Transforma em lista
+        const listaJogos = Object.keys(dadosJogos).map(link => {
+            return { ...dadosJogos[link], link: link };
+        });
+
         const linkOriginal = decodeURIComponent(idJogo);
         const jogo = listaJogos.find(j => j.link === linkOriginal);
 
@@ -22,6 +31,7 @@ async function carregarDetalhes() {
 
         const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/400x600/1e1e1e/0070d1?text=Sem+Capa';
 
+        // A função formatarTamanho() vem do script global (../script.js) que está incluído no HTML
         container.innerHTML = `
             <div class="detalhes-container">
                 <img src="${imagemCapa}" class="detalhes-capa" alt="Capa de ${jogo.name}">
@@ -29,7 +39,6 @@ async function carregarDetalhes() {
                     <h1>${jogo.name}</h1>
                     <div>
                         <span class="meta-tag">Região: ${jogo.region}</span>
-                        <!-- Usa a função global para formatar o tamanho -->
                         <span class="meta-tag">Tamanho: ${formatarTamanho(jogo.size)}</span>
                         <span class="meta-tag">Versão: ${jogo.version}</span>
                     </div>
