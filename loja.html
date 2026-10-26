@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zer0 Store - Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hub-header">
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer;">Zer0 Store</div>
+        <nav class="nav-plataformas" id="menu-plataformas">
+            <a href="loja.html?p=pc" data-plataforma="pc">PC</a>
+            <a href="loja.html?p=ps5" data-plataforma="ps5">PS5</a>
+            <a href="loja.html?p=ps4" data-plataforma="ps4">PS4</a>
+            <a href="loja.html?p=ps3" data-plataforma="ps3">PS3</a>
+            <a href="loja.html?p=ps2" data-plataforma="ps2">PS2</a>
+            <a href="loja.html?p=psp" data-plataforma="psp">PSP</a>
+            <a href="loja.html?p=xbox" data-plataforma="xbox">XBOX</a>
+            <a href="loja.html?p=apps" data-plataforma="apps">APP</a>
+        </nav>
+        <div class="header-actions">
+            <a href="jb.html" class="btn-jb"><i class="fa-solid fa-bolt"></i> Desbloquear</a>
+        </div>
+    </header>
+
+    <main class="hub-main">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="busca" class="search-input" placeholder="Digite o nome do jogo...">
+        </div>
+
+        <div id="loading" class="loading">Carregando catálogo...</div>
+
+        <div class="catalogo-header">
+            <h2 id="titulo-plataforma" style="color: white; margin: 0;">Jogos</h2>
+            <button id="btn-toggle-view" class="btn-toggle"><i class="fa-solid fa-list"></i> Mudar para Lista</button>
+        </div>
+
+        <div class="loja-container grid-view" id="grid-jogos"></div>
+    </main>
+
+    <footer class="hub-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                Zer0 Store
+            </div>
+            
+            <div class="footer-links">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="jb.html"><i class="fa-solid fa-bolt"></i> Desbloqueio</a>
+                <a href="https://github.com/Zer0G0ld/Zer0-Store" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+
+            <div class="footer-info">
+                <p>O seu Hub Universal de Jogos.</p>
+                <p>&copy; 2026 Zer0 Store. Todos os direitos reservados.</p>
+                <p style="font-size: 0.8em; color: #666;">Não hospedamos arquivos. Todos os links são de terceiros.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="loja.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

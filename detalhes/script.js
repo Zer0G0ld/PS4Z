@@ -9,58 +9,57 @@ async function carregarDetalhes() {
     }
 
     try {
-        // Busca o JSON subindo um nível (para achar a raiz do projeto)
-        const resposta = await fetch('../GAMES.json');
-        if (!resposta.ok) throw new Error("Arquivo GAMES.json não encontrado.");
-        
-        const json = await resposta.json();
-        const dadosJogos = json.DATA;
-        
-        // Transforma em lista
-        const listaJogos = Object.keys(dadosJogos).map(link => {
-            return { ...dadosJogos[link], link: link };
-        });
-
+        const jogos = await carregarDados();
         const linkOriginal = decodeURIComponent(idJogo);
-        const jogo = listaJogos.find(j => j.link === linkOriginal);
+        const jogo = jogos.find(j => j.link === linkOriginal);
 
-        if (!jogo) throw new Error("Jogo não encontrado.");
+        if (!jogo) throw new Error("Jogo não encontrado no banco de dados.");
 
         document.getElementById('loading').style.display = 'none';
-        const container = document.getElementById('conteudo-detalhes');
+        const container = document.getElementById('conteudo');
         container.style.display = 'flex';
 
-        const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/400x600/1e1e1e/0070d1?text=Sem+Capa';
+        const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/400x600/1b2838/66c0f4?text=Sem+Capa';
+        
+        const banner = document.getElementById('steam-banner');
+        banner.style.backgroundImage = `url('${imagemCapa}')`;
 
-        // NOVO: Aplica a imagem no fundo do body para o efeito Steam
-        document.body.style.backgroundImage = `url('${imagemCapa}')`;
-
-        // A função formatarTamanho() vem do script global (../script.js) que está incluído no HTML
+        // Monta o HTML com os ícones do Font Awesome
         container.innerHTML = `
-            <div class="detalhes-container">
-                <img src="${imagemCapa}" class="detalhes-capa" alt="Capa de ${jogo.name}">
-                <div class="detalhes-info">
-                    <h1>${jogo.name}</h1>
-                    <div>
-                        <span class="meta-tag">Região: ${jogo.region}</span>
-                        <span class="meta-tag">Tamanho: ${formatarTamanho(jogo.size)}</span>
-                        <span class="meta-tag">Versão: ${jogo.version}</span>
-                    </div>
-                    <p style="color: #ccc; line-height: 1.6; font-size: 1.1em; margin-bottom: 30px;">
-                        <strong>ID do Jogo:</strong> ${jogo.title_id} <br>
-                        <strong>Firmware Mínimo:</strong> ${jogo.min_fw || 'Desconhecido'}
+            <div class="steam-header">
+                <h1>${jogo.name}</h1>
+                <div class="steam-tags">
+                    <span class="steam-tag">Região: ${jogo.region}</span>
+                    <span class="steam-tag">Versão: ${jogo.version}</span>
+                    <span class="steam-tag">Lançamento: ${jogo.release}</span>
+                </div>
+            </div>
+
+            <div class="steam-content">
+                <div class="steam-cover-col">
+                    <img src="${imagemCapa}" class="steam-cover-img" alt="${jogo.name}">
+                </div>
+                <div class="steam-info-col">
+                    <p class="steam-description">
+                        Baixe ${jogo.name} para o seu dispositivo. Certifique-se de ter espaço suficiente no seu HD e o firmware atualizado.
                     </p>
-                    <a href="${linkOriginal}" class="download-btn" download target="_blank">⬇ Baixar Jogo Agora</a>
-                    <a href="../index.html" class="btn-voltar">Voltar para a Loja</a>
+                    <ul class="steam-meta-list">
+                        <li><span>ID do Jogo:</span> <span>${jogo.title_id}</span></li>
+                        <li><span>Firmware Mínimo:</span> <span>${jogo.min_fw || 'Desconhecido'}</span></li>
+                        <li><span>Tamanho:</span> <span>${formatarTamanho(jogo.size)}</span></li>
+                    </ul>
+                    <div class="steam-actions">
+                        <a href="${linkOriginal}" class="btn-steam-green" download target="_blank"><i class="fa-solid fa-download"></i> Baixar Jogo</a>
+                        <a href="../index.html" class="btn-steam-blue"><i class="fa-solid fa-arrow-left"></i> Voltar para a Loja</a>
+                    </div>
                 </div>
             </div>
         `;
     } catch (erro) {
         console.error(erro);
-        document.getElementById('loading').innerText = "Erro ao carregar os detalhes.";
-        document.getElementById('loading').style.color = "#ff4444";
+        document.getElementById('loading').innerText = "Erro ao carregar detalhes. Verifique o console.";
+        document.getElementById('loading').style.color = "#e63946";
     }
 }
 
-// Chama a função para iniciar a mágica
 carregarDetalhes();

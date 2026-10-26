@@ -20,7 +20,7 @@
       "min_fw": "9.50",
       "cover_url": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/store/software/switch/70010000095084/7ef29361c83a4952a12fa3c0d868c2010315682eb9b34f1bbaa5a542acf93623"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Battle-Stadium-D.O.N_SLPS2567...-mod-with-japanese-voice.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Battle-Stadium-DON.pkg": {
       "title_id": "SLPS2567",
       "region": "JAP",
       "name": "Battle Stadium D.O.N (PS2 Port)",
@@ -30,7 +30,7 @@
       "min_fw": "5.05",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1793420/header.jpg?t=1637001234" 
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-I.pkg": {
       "title_id": "CUSA02290",
       "region": "USA",
       "name": "Call of Duty: Black Ops",

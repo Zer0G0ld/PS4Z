@@ -3,46 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zer0 Loja PS4</title>
+    <title>Zer0 Store - O seu Hub de Jogos</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <header>
-        <!-- Botão de Desbloqueio adicionado aqui -->
-        <div style="position: absolute; top: 20px; right: 20px;">
-            <a href="jb.html" style="background: #e63946; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1em; box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4); transition: 0.2s;">⚡ Desbloquear PS4</a>
+    <header class="hub-header">
+        <div class="logo">Zer0 Store</div>
+        <nav class="nav-plataformas">
+            <a href="loja.html?p=pc">PC</a>
+            <a href="loja.html?p=ps5">PS5</a>
+            <a href="loja.html?p=ps4">PS4</a>
+            <a href="loja.html?p=ps3">PS3</a>
+            <a href="loja.html?p=ps2">PS2</a>
+            <a href="loja.html?p=psp">PSP</a>
+            <a href="loja.html?p=xbox">XBOX</a>
+            <a href="loja.html?p=apps">APP</a>
+        </nav>
+        <div class="header-actions">
+            <a href="jb.html" class="btn-jb"><i class="fa-solid fa-bolt"></i> Desbloquear</a>
         </div>
-        
-        <h1>Zer0 Loja PS4</h1>
-        <p class="subtitle">A sua biblioteca de jogos desbloqueada</p>
     </header>
 
-    <div class="search-container">
-        <input type="text" id="busca" class="search-input" placeholder="Digite o nome do jogo para buscar...">
-        
-        <!-- NOVOS BOTÕES DE FILTRO -->
-        <div class="filtros-container">
-            <button class="filtro-btn active" data-filtro="todos">Tudo</button>
-            <button class="filtro-btn" data-filtro="jogos">🎮 Jogos</button>
-            <button class="filtro-btn" data-filtro="apps">⚙️ Ferramentas</button>
+    <main class="hub-main">
+        <div id="loading" class="loading">Carregando catálogo...</div>
+
+        <div class="prateleiras-container">
+            <section class="prateleira" id="prateleira-ps4" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-brands fa-playstation"></i> PlayStation 4</h2>
+                    <a href="loja.html?p=ps4" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-ps4"></div>
+            </section>
+
+            <section class="prateleira" id="prateleira-ps3" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-brands fa-playstation"></i> PlayStation 3</h2>
+                    <a href="loja.html?p=ps3" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-ps3"></div>
+            </section>
+
+            <section class="prateleira" id="prateleira-pc" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-brands fa-steam"></i> PC / Steam</h2>
+                    <a href="loja.html?p=pc" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-pc"></div>
+            </section>
+            
+            <section class="prateleira" id="prateleira-apps" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas e Apps</h2>
+                    <a href="loja.html?p=apps" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-apps"></div>
+            </section>
         </div>
-    </div>
+    </main>
 
-    <div id="loading">Carregando catálogo...</div>
+    <footer class="hub-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                Zer0 Store
+            </div>
+            
+            <div class="footer-links">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="jb.html"><i class="fa-solid fa-bolt"></i> Desbloqueio</a>
+                <a href="https://github.com/Zer0G0ld/Zer0-Store" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
 
-    <!-- Área de Jogos -->
-    <h2 class="section-title" id="titulo-jogos" style="display: none; width: 100%; text-align: left; max-width: 1300px; margin-bottom: 15px; color: var(--ps-blue);">🎮 Jogos</h2>
-    <div class="loja-container" id="lista-jogos"></div>
+            <div class="footer-info">
+                <p>O seu Hub Universal de Jogos.</p>
+                <p>&copy; 2026 Zer0 Store. Todos os direitos reservados.</p>
+                <p style="font-size: 0.8em; color: #666;">Não hospedamos arquivos. Todos os links são de terceiros.</p>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Área de Ferramentas e Apps -->
-    <h2 class="section-title" id="titulo-apps" style="display: none; width: 100%; text-align: left; max-width: 1300px; margin-bottom: 15px; color: var(--ps-blue);">⚙️ Ferramentas do Sistema</h2>
-    <div class="loja-container" id="lista-apps" style="margin-bottom: 40px;"></div>
-
-    <!-- Script global (só funções utilitárias) -->
-    <script src="script.js"></script>
-    <!-- Script específico da loja -->
-    <script src="loja.js"></script>
-
+    <script src="data.js"></script>
+    <script src="hub.js"></script>
+    <script src="footer.js"></script>
 </body>
 </html>
