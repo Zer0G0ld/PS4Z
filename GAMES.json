@@ -1,5 +1,15 @@
 {
   "DATA": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Assassins-Creed-Black-Flag.pkg": {
+      "title_id": "CUSA00009",
+      "region": "EUR",
+      "name": "Assassin's Creed IV Black Flag",
+      "size": 6762000000,
+      "version": "1.04",
+      "release": "10-29-2013",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/header.jpg?t=1681995341"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Bendy-and-The-Dark-Revival.pkg": {
       "title_id": "CUSA38355",
       "region": "EUR",
@@ -9,6 +19,36 @@
       "release": "11-15-2022",
       "min_fw": "9.50",
       "cover_url": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/store/software/switch/70010000095084/7ef29361c83a4952a12fa3c0d868c2010315682eb9b34f1bbaa5a542acf93623"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Battle-Stadium-D.O.N_SLPS2567...-mod-with-japanese-voice.pkg": {
+      "title_id": "SLPS2567",
+      "region": "JAP",
+      "name": "Battle Stadium D.O.N (PS2 Port)",
+      "size": 279969792,
+      "version": "1.00",
+      "release": "07-20-2006",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1793420/header.jpg?t=1637001234" 
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Celeste-PS4.pkg": {
+      "title_id": "CUSA11302",
+      "region": "USA",
+      "name": "Celeste",
+      "size": 1424752640,
+      "version": "1.05",
+      "release": "01-25-2018",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/504230/header.jpg?t=1718293602"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/%5BSPSX%5D-DELTARUNE-CUSA52463-JAPAN-v1.00-%289.00%2B%29-PS4.pkg": {
+      "title_id": "CUSA52463",
+      "region": "JAP",
+      "name": "DELTARUNE",
+      "size": 514850816,
+      "version": "1.00",
+      "release": "10-31-2025",
+      "min_fw": "9.00",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1671210/header.jpg?t=1747090084"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Elden-Ring-Shadow-of-the-Erdtree.pkg": {
       "title_id": "CUSA18723",
@@ -90,7 +130,7 @@
       "min_fw": "5.05",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1426210/header_brazilian.jpg?t=1777395376"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/STREET-FIGHTER-IV.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Street-Fighter-IV.pkg": {
       "title_id": "CUSA01839",
       "region": "EUR",
       "name": "Street Fighter IV",
@@ -99,6 +139,16 @@
       "release": "02-17-2015",
       "min_fw": "5.05",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/21660/header.jpg?t=1644282876"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Skyrim-Special-Edition.pkg": {
+      "title_id": "CUSA05333",
+      "region": "EUR",
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "size": 31880491008,
+      "version": "1.00",
+      "release": "10-28-2016",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/489830/header.jpg?t=1730383426"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/The-King-of-Fighters-2002-Unlimited-Match.pkg": {
       "title_id": "CUSA18001",
@@ -119,6 +169,16 @@
       "release": "09-07-2018",
       "min_fw": "6.72",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817070/header.jpg?t=1771843630"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/NBA-2K25.pkg": {
+      "title_id": "CUSA42312",
+      "region": "EUR",
+      "name": "NBA 2K25",
+      "size": 47426961408,
+      "version": "1.05",
+      "release": "09-06-2024",
+      "min_fw": "9.00",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2878980/header.jpg?t=1748443123"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FPKGi_v1.10.0-release.pkg": {
       "title_id": "LAPY20001",
