@@ -10,6 +10,16 @@
       "min_fw": "9.50",
       "cover_url": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/store/software/switch/70010000095084/7ef29361c83a4952a12fa3c0d868c2010315682eb9b34f1bbaa5a542acf93623"
     },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Elden-Ring-Shadow-of-the-Erdtree.pkg": {
+      "title_id": "CUSA18723",
+      "region": "EUR",
+      "name": "Elden Ring: Shadow of the Erdtree",
+      "size": 33930000000,
+      "version": "1.00",
+      "release": "06-21-2024",
+      "min_fw": "9.00",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1748284326"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Stardew-Valley.pkg": {
       "title_id": "CUSA06840",
       "region": "USA",
@@ -18,7 +28,7 @@
       "version": "1.62",
       "release": "11-15-2016",
       "min_fw": "5.05",
-      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_yN9igNIisc73z6L0fGdygzj2gO7AVqHwQTNUScpCkQE4S5kEggWaLPU&s=10"
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/header.jpg?t=1748634028"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Subnautica.pkg": {
       "title_id": "CUSA13529",
@@ -38,7 +48,7 @@
       "version": "1.01",
       "release": "06-29-2016",
       "min_fw": "5.05",
-      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbyZP98PXkMkPXBUkQmp3j6KwXlTONYDzePNItDidVYg&s=10"
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/304430/header.jpg?t=1749040622"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Inside-My-Radio.pkg": {
       "title_id": "CUSA03871",
@@ -70,7 +80,7 @@
       "min_fw": "5.05",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/627270/header.jpg?t=1745536404"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/It%20Takes%20Two.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/It-Takes-Two.pkg": {
       "title_id": "CUSA16746",
       "region": "EUR",
       "name": "It Takes Two",
@@ -80,7 +90,7 @@
       "min_fw": "5.05",
       "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1426210/header_brazilian.jpg?t=1777395376"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/STREET%20FIGHTER%20IV.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/STREET-FIGHTER-IV.pkg": {
       "title_id": "CUSA01839",
       "region": "EUR",
       "name": "Street Fighter IV",
@@ -118,17 +128,17 @@
       "version": "1.10.0",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/FPKGi_v1.10.0-release.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/fpkgi.png"
     },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Xplorer-2.08.pkg": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Xplorer.pkg": {
       "title_id": "LAPY20009",
       "region": "APP",
       "name": "PS4-Xplorer 2.0",
       "size": 66904064,
       "version": "2.08",
-      "release": "2026",
+      "release": "2024",
       "min_fw": "4.55",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Xplorer.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/ps4xplorer.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/YouTube.pkg": {
       "title_id": "CUSA01116",
@@ -138,7 +148,7 @@
       "version": "2.32",
       "release": "2022",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Youtube.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Youtube.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Netflix.pkg": {
       "title_id": "CUSA00127",
@@ -148,7 +158,7 @@
       "version": "1.53",
       "release": "2021",
       "min_fw": "9.00",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/netflix.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Netflix.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Apollo-Save-Tool.pkg": {
       "title_id": "APOL00004",
@@ -158,7 +168,7 @@
       "version": "2.3.2",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Apollo-Save-Tool.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Apollo-Save-Tool.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Cheats-Manager.pkg": {
       "title_id": "CHTM00777",
@@ -168,17 +178,7 @@
       "version": "1.2.2",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Cheats.png"
-    },
-    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Homebrew-Store.pkg": {
-      "title_id": "LAPY20015",
-      "region": "APP",
-      "name": "Homebrew Store",
-      "size": 54790000,
-      "version": "1.02",
-      "release": "2024",
-      "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Store-R2.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/PS4-Cheats.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Icon-Mask.pkg": {
       "title_id": "LAPY20007",
@@ -188,7 +188,7 @@
       "version": "1.16",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Icon-Mask.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Icon-Mask.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Itemzflow-Game-Manager.pkg": {
       "title_id": "ITEM00001",
@@ -198,7 +198,7 @@
       "version": "1.08",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/itemzflow.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/itemzflow.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Temperature.pkg": {
       "title_id": "LAPY20006",
@@ -208,7 +208,7 @@
       "version": "1.07",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Temperature.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Temperute.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Remote-Package-Installer.pkg": {
       "title_id": "LAPY20003",
@@ -218,7 +218,7 @@
       "version": "1.02",
       "release": "2022",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Remote-Package-Installer.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Remote-Package-Installer.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Avatar-Changer.pkg": {
       "title_id": "LAPY20002",
@@ -228,7 +228,7 @@
       "version": "1.00",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Avatar-Changer.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Avatar-Changer.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/ezremote_client_v2.05.pkg": {
       "title_id": "LAPY20008",
@@ -238,7 +238,7 @@
       "version": "2.05",
       "release": "2024",
       "min_fw": "5.05",
-      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/ezRemoteClient.png"
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/ezRemoteClient.png"
     }
   }
 }
