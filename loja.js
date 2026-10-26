@@ -1,3 +1,4 @@
+// loja.js
 async function iniciarLoja() {
     try {
         // Busca o JSON na própria raiz
@@ -31,18 +32,20 @@ async function iniciarLoja() {
                     ? `<img src="${imagemCapa}" class="game-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\\'display:flex; align-items:center; justify-content:center; height:100%; color:#0070d1; font-size:4em; opacity:0.3\\'>🎮</div>'">`
                     : `<div style="display:flex; align-items:center; justify-content:center; height:100%; color:#0070d1; font-size:4em; opacity:0.3;">🎮</div>`;
 
+                // Verifica se é APP apenas para adicionar a classe CSS
                 const isApp = jogo.region === "APP";
-                const corBotao = isApp ? "background-color: #e63946;" : ""; 
+                const classeApp = isApp ? "app-card" : "";
 
                 container.innerHTML += `
-                    <a href="detalhes/detalhes.html?id=${idSeguro}" class="game-card" style="text-decoration: none; color: inherit;">
+                    <a href="detalhes/detalhes.html?id=${idSeguro}" class="game-card ${classeApp}" style="text-decoration: none; color: inherit;">
                         <div class="cover-wrapper">${htmlCapa}</div>
                         <div class="game-info">
                             <div>
                                 <div class="game-title">${jogo.name}</div>
                                 <div style="text-align:center;"><span class="game-size">${formatarTamanho(jogo.size)}</span></div>
                             </div>
-                            <div class="download-btn" style="${corBotao} pointer-events: none;">Ver Detalhes</div>
+                            <!-- O CSS vai pintar de vermelho automaticamente se for app-card -->
+                            <div class="download-btn" style="pointer-events: none;">Ver Detalhes</div>
                         </div>
                     </a>
                 `;

@@ -1,3 +1,4 @@
+// script.js
 // Variável global para guardar os jogos (se precisar em outra página)
 let todosOsJogos = [];
 

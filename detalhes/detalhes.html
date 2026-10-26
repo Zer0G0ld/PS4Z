@@ -9,19 +9,21 @@
 </head>
 <body>
     <header>
-        <!-- Botão de Desbloqueio adicionado aqui -->
+        <!-- Botão de Desbloqueio (Corrigido para voltar uma pasta) -->
         <div style="position: absolute; top: 20px; right: 20px;">
-            <a href="jb.html" style="background: #e63946; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1em; box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4); transition: 0.2s;">⚡ Desbloquear PS4</a>
+            <a href="../jb.html" style="background: #e63946; color: white; padding: 10px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1em; box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4); transition: 0.2s;">⚡ Desbloquear PS4</a>
         </div>
         
         <h1>Zer0 Loja PS4</h1>
         <p class="subtitle">A sua biblioteca de jogos desbloqueada</p>
     </header>
     
-    <div id="loading">Carregando detalhes...</div>
-    <div id="conteudo-detalhes" style="display: none; width: 100%; justify-content: center;"></div>
+    <div id="loading" style="text-align: center; margin-top: 50px; font-weight: bold; color: var(--ps-blue);">Carregando detalhes...</div>
+    
+    <!-- A div abaixo centraliza o conteúdo e deixa o scroll bonito -->
+    <div id="conteudo-detalhes" style="display: none; width: 100%; justify-content: center; padding-bottom: 50px;"></div>
 
-     <!-- Script global (funções utilitárias) -->
+    <!-- Script global (funções utilitárias) -->
     <script src="../script.js"></script>
     <!-- Script específico da página de detalhes -->
     <script src="script.js"></script>
