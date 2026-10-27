@@ -283,6 +283,13 @@ body {
     outline: 2px solid var(--steam-blue);
 }
 
+/* --- RESULTADOS DA BUSCA NA HOME --- */
+#resultados-busca {
+    /* Herda o grid-view, mas garante que fique visível quando ativado */
+    margin-top: 20px;
+    width: 100%;
+}
+
 /* --- ESTILO PADRÃO (GRID / GRADE COMPACTA) --- */
 .loja-container.grid-view {
     display: grid;

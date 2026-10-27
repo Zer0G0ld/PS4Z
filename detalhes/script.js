@@ -9,7 +9,11 @@ async function carregarDetalhes() {
     }
 
     try {
+        // A MÁGICA ACONTECE AQUI:
+        // Chama a função sem parâmetro. O data.js vai buscar o GAMES.json 
+        // E o data/DATA_GAMES.json ao mesmo tempo.
         const jogos = await carregarDados();
+        
         const linkOriginal = decodeURIComponent(idJogo);
         const jogo = jogos.find(j => j.link === linkOriginal);
 
