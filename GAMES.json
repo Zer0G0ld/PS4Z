@@ -230,6 +230,16 @@
       "min_fw": "6.72",
       "cover_url": "https://cdn.awsli.com.br/800x800/53/53761/produto/29815822/4677d91514.jpg"
     },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Marvels-Spider-Man-Miles-Morales-PS4.pkg": {
+      "title_id": "CUSA02299",
+      "region": "USA",
+      "name": "Marvels Spider Man Miles Morales",
+      "size": 63854608384,
+      "version": "1.19",
+      "release": "09-07-2018",
+      "min_fw": "6.72",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2024/03/Marvels-Spider-Man-Miles-Morales-PS4-PKG.webp"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/NBA-2K25.pkg": {
       "title_id": "CUSA42312",
       "region": "EUR",
@@ -239,6 +249,16 @@
       "release": "09-06-2024",
       "min_fw": "9.00",
       "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9r2fhX1ZFm5chFKbXxIoneHyQ9VMnGvoLmXWb-lZ8qDrGQgINIhY7HZo&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/NBA-2K26-PS4-PS4.pkg": {
+      "title_id": "CUSA42312",
+      "region": "EUR",
+      "name": "NBA 2K26",
+      "size": 47426961408,
+      "version": "1.05",
+      "release": "09-06-2024",
+      "min_fw": "9.00",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2025/09/NBA-2K26-PS4-PKG.webp"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FPKGi_v1.10.0-release.pkg": {
       "title_id": "LAPY20001",
