@@ -1,0 +1,44 @@
+{
+  "DATA": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Black-PC-Port-PTBR.rar": {
+      "title_id": "PC-001",
+      "region": "PC",
+      "name": "Black (PC Port) - Traduzido PT-BR",
+      "size": 1342177280,
+      "version": "1.00",
+      "release": "2024",
+      "min_fw": "0",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1pPI3FQ8VIxmrwHXHWWifONJj_2gdeSnWGRG3u6Zs81zcSUq63kKh4yo&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/The-Last-of-Us-PS3.pkg": {
+      "title_id": "BCES01584",
+      "region": "EUR",
+      "name": "The Last of Us (PS3)",
+      "size": 26000000000,
+      "version": "1.11",
+      "release": "06-14-2013",
+      "min_fw": "4.40",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdbgEjy9O9g7-mlopFk79umC5b-_JFushWeaJJES-2KQ&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/God-of-War-3-PS3.iso": {
+      "title_id": "BCES00510",
+      "region": "EUR",
+      "name": "God of War 3 (PS3)",
+      "size": 35000000000,
+      "version": "1.03",
+      "release": "03-16-2010",
+      "min_fw": "3.55",
+      "cover_url": "https://cdn.awsli.com.br/800x800/53/53761/produto/13244966/d8b15e12f6.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Uncharted-3-Drakes-Deception-GOTY-PS3.iso": {
+      "title_id": "BCES-01664",
+      "region": "EUR",
+      "name": "Uncharted 3: Drake's Deception (GOTY) [PS3]",
+      "size": 45800000000,
+      "version": "1.00",
+      "release": "11-01-2011",
+      "min_fw": "3.55",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxMvlFXOPc4HAvldv0yUu6hGY_O8oe4Fl60K2lutYDQFZgGlCfnUa09Vdy&s=10"
+    }
+  }
+}

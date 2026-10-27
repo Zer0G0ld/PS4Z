@@ -1,12 +1,14 @@
 // loja.js
 async function iniciarLoja() {
-    const jogos = await carregarDados();
-    if (jogos.length === 0) return;
-
+    // 1. Pega a plataforma da URL
     const urlParams = new URLSearchParams(window.location.search);
     let plataformaFiltro = urlParams.get('p') || 'ps4';
 
-    // Marca o link ativo no menu
+    // 2. Carrega os dados passando a plataforma (o data.js decide qual JSON ler)
+    const jogos = await carregarDados(plataformaFiltro);
+    if (jogos.length === 0) return;
+
+    // 3. Marca o link ativo no menu
     document.querySelectorAll('.nav-plataformas a').forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('data-plataforma') === plataformaFiltro) {
@@ -14,7 +16,7 @@ async function iniciarLoja() {
         }
     });
 
-    // Títulos com ícones Font Awesome
+    // 4. Títulos com ícones Font Awesome
     const titulos = {
         ps5: '<i class="fa-brands fa-playstation"></i> Jogos de PlayStation 5',
         ps4: '<i class="fa-brands fa-playstation"></i> Jogos de PlayStation 4',
@@ -32,7 +34,7 @@ async function iniciarLoja() {
     const container = document.getElementById('grid-jogos');
     const btnToggle = document.getElementById('btn-toggle-view');
 
-    // --- LÓGICA DO LOCAL STORAGE ---
+    // 5. Lógica para alternar visualização (Grade / Lista)
     const modoSalvo = localStorage.getItem('modoVisualizacao') || 'grid-view';
     aplicarModo(modoSalvo);
 
@@ -56,12 +58,12 @@ async function iniciarLoja() {
         }
     }
 
-    // Função que desenha os cards
+    // 6. Função que desenha os cards na tela
     function renderizar(jogosFiltrados) {
         container.innerHTML = '';
 
         if (jogosFiltrados.length === 0) {
-            container.innerHTML = '<p style="color: white;">Nenhum jogo encontrado.</p>';
+            container.innerHTML = '<p style="color: white; text-align: center; width: 100%;">Nenhum jogo encontrado.</p>';
             return;
         }
 
@@ -84,9 +86,11 @@ async function iniciarLoja() {
         });
     }
 
+    // 7. Filtra a lista da plataforma e renderiza
     const jogosDaPlataforma = jogos.filter(j => obterPlataforma(j) === plataformaFiltro);
     renderizar(jogosDaPlataforma);
 
+    // 8. Lógica da Barra de Busca
     document.getElementById('busca').addEventListener('input', (e) => {
         const termo = e.target.value.toLowerCase();
         const filtrados = jogosDaPlataforma.filter(jogo => 

@@ -78,6 +78,9 @@ body {
     padding: 30px 40px;
     max-width: 1500px;
     margin: 0 auto;
+    flex-grow: 1;
+    width: 100%; /* Garante que ocupe a largura toda */
+    box-sizing: border-box;
 }
 
 .search-box {
@@ -190,35 +193,26 @@ body {
 
 .cover-wrapper {
     position: relative;
-    padding-top: 25px; /* Tarja menor para caber mais */
+    /* Removi o padding-top que dava espaço para a tarja */
+    padding-top: 0; 
     background-color: #111;
     aspect-ratio: 4 / 5;
+    border-radius: 4px; /* Arredonda as bordas da imagem */
+    overflow: hidden; 
 }
 
 /* A Tarja (PS4, PS3, PC) */
 .cover-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 25px;
-    background-color: #0070d1;
-    z-index: 2;
+    display: none; 
 }
 
 .cover-wrapper::after {
-    content: 'PS4';
-    position: absolute;
-    top: 4px; left: 10px;
-    font-size: 0.9em;
-    font-weight: 900;
-    letter-spacing: 1px;
-    z-index: 3;
-    color: transparent;
-    -webkit-text-stroke: 1px white;
+    display: none; 
 }
 
 .game-cover { 
     width: 100%; 
-    height: calc(100% - 25px); 
+    height: 100%; /* A imagem agora ocupa todo o espaço */
     object-fit: cover; 
     display: block;
 }
@@ -292,9 +286,11 @@ body {
 /* --- ESTILO PADRÃO (GRID / GRADE COMPACTA) --- */
 .loja-container.grid-view {
     display: grid;
-    /* Diminuí de 200px para 170px e o gap de 20px para 15px */
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 15px;
+    /* Aumentei de 160px para 180px e o gap de 15px para 25px */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px; 
+    width: 100%;
+    justify-content: center;
 }
 
 /* --- ESTILO ALTERNATIVO (LISTA CORRIGIDA) --- */
@@ -302,7 +298,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%; /* Garante que a lista ocupe toda a largura */
+    width: 100%;
 }
 
 /* Ajustes do Card no modo Lista */
@@ -420,6 +416,3 @@ body {
 }
 
 /* O conteúdo principal vai crescer para empurrar o footer */
-.hub-main {
-    flex-grow: 1;
-}
