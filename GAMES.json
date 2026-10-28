@@ -50,6 +50,16 @@
       "min_fw": "5.05",
       "cover_url": "https://cdn.awsli.com.br/2500x2500/2835/2835417/produto/402172575/ad1c621ca4fb41b0baa377f777315013-16yqavrrf9.png"
     },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-III-PS4.pkg": {
+      "title_id": "CUSA02291",
+      "region": "USA",
+      "name": "Call of Duty: Black Ops III",
+      "size": 16000000000,
+      "version": "1.00",
+      "release": "11-13-2012",
+      "min_fw": "5.05",
+      "cover_url": "https://m.media-amazon.com/images/I/615S2VgX71L._AC_UF1000,1000_QL80_.jpg"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Ghosts-PS4.pkg": {
       "title_id": "CUSA02291",
       "region": "USA",
@@ -59,6 +69,16 @@
       "release": "11-13-2012",
       "min_fw": "5.05",
       "cover_url": "https://www.superpsx.com/wp-content/uploads/2018/05/Call-of-Duty-Ghosts-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Modern-Warfare-4-PS4.pkg": {
+      "title_id": "CUSA02291",
+      "region": "USA",
+      "name": "Call of Duty Modern Warfare",
+      "size": 16000000000,
+      "version": "1.00",
+      "release": "11-13-2012",
+      "min_fw": "5.05",
+      "cover_url": "https://cdn.awsli.com.br/2500x2500/2835/2835417/produto/354715354/cmw1-ps4-tncissot36.png"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Celeste-PS4.pkg": {
       "title_id": "CUSA11302",
@@ -89,6 +109,16 @@
       "release": "06-21-2024",
       "min_fw": "9.00",
       "cover_url": "https://cdn.awsli.com.br/600x1000/1634/1634877/produto/322701150/captura-de-tela-2024-12-02-a-s-23-04-46-n7q5kv32xs.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/GigaBash-PS4.pkg": {
+      "title_id": "CUSA02291",
+      "region": "USA",
+      "name": "GigaBash",
+      "size": 16000000000,
+      "version": "1.00",
+      "release": "11-13-2012",
+      "min_fw": "5.05",
+      "cover_url": "https://i5.walmartimages.com/seo/Gigabash-for-PlayStation-4-Limited-Run-543_92b8dbd7-449e-485d-a593-89837502ce03.92d06624690cce2b842ce3510174ea66.jpeg"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Hollow-Knight-Voidheart-PS4.pkg": {
       "title_id": "CUSA18723",
