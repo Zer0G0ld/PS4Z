@@ -59,6 +59,10 @@ function obterPlataforma(jogo) {
     
     const nome = jogo.name.toLowerCase();
     if (jogo.region === "APP") return "apps";
+    
+    // NOVO: Verifica se é PS5
+    if (nome.includes("ps5")) return "ps5";
+    
     if (nome.includes("ps3")) return "ps3";
     if (nome.includes("ps2")) return "ps2";
     if (nome.includes("psp")) return "psp";

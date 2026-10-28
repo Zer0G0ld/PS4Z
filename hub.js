@@ -46,12 +46,17 @@ async function iniciarHome() {
 
         // Agrupa e renderiza (igual ao código original)
         const grupos = {
+            ps5: todosOsJogos.filter(j => obterPlataforma(j) === "ps5"),
             ps4: todosOsJogos.filter(j => obterPlataforma(j) === "ps4"),
             ps3: todosOsJogos.filter(j => obterPlataforma(j) === "ps3"),
             pc: todosOsJogos.filter(j => obterPlataforma(j) === "pc"),
             apps: todosOsJogos.filter(j => obterPlataforma(j) === "apps")
         };
-
+        
+        if (grupos.ps5.length > 0) {
+            document.getElementById('prateleira-ps5').style.display = 'block';
+            document.getElementById('lista-ps5').innerHTML = grupos.ps5.slice(0, 10).map(criarCard).join('');
+        }
         if (grupos.ps4.length > 0) {
             document.getElementById('prateleira-ps4').style.display = 'block';
             document.getElementById('lista-ps4').innerHTML = grupos.ps4.slice(0, 10).map(criarCard).join('');

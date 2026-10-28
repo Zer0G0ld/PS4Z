@@ -10,6 +10,16 @@
       "min_fw": "0",
       "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1pPI3FQ8VIxmrwHXHWWifONJj_2gdeSnWGRG3u6Zs81zcSUq63kKh4yo&s=10"
     },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Borderlands-2-Game-of-The-Year-Edition-PS3.iso": {
+      "title_id": "BLES01685",
+      "region": "EUR",
+      "name": "Borderlands 2 Game of the Year Edition [PS3]",
+      "size": 15000000000,
+      "version": "1.00",
+      "release": "10-11-2013",
+      "min_fw": "4.21",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2025/01/Borderlands-2-Game-of-The-Year-Edition-PS3.webp"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/GOW-PSP-COLLECTION-PT-BR-PC.rar": {
       "title_id": "PC-GOW-PSP",
       "region": "PC",
@@ -49,6 +59,16 @@
       "release": "11-01-2011",
       "min_fw": "3.55",
       "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxMvlFXOPc4HAvldv0yUu6hGY_O8oe4Fl60K2lutYDQFZgGlCfnUa09Vdy&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Bendy-Lone-Wolf-PS5.pkg": {
+      "title_id": "CUSA38356",
+      "region": "EUR",
+      "name": "Bendy: Lone Wolf [PS5]",
+      "size": 2500000000,
+      "version": "1.00",
+      "release": "2026",
+      "min_fw": "9.00",
+      "cover_url": "https://cdn.awsli.com.br/2500x2500/2992/2992030/produto/400714775/a6fa3171e8104cbc8f9a367bd66628e3-grh54k7w6b.png"
     }
   }
 }

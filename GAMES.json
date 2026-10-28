@@ -110,6 +110,16 @@
       "min_fw": "9.00",
       "cover_url": "https://cdn.awsli.com.br/600x1000/1634/1634877/produto/322701150/captura-de-tela-2024-12-02-a-s-23-04-46-n7q5kv32xs.png"
     },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FIFA-23-PS4.pkg": {
+      "title_id": "CUSA31879",
+      "region": "EUR",
+      "name": "FIFA 23",
+      "size": 45000000000,
+      "version": "1.00",
+      "release": "09-30-2022",
+      "min_fw": "9.00",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2024/09/EA-SPORTS_-FIFA-23-PS4-PKG.webp"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/GigaBash-PS4.pkg": {
       "title_id": "CUSA19322",
       "region": "USA",
@@ -129,6 +139,16 @@
       "release": "06-21-2024",
       "min_fw": "9.00",
       "cover_url": "https://ngcpgames.com.br/cdn/shop/files/hollow-ps4-x88o4xy6w4.png?v=1792204529&width=640"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Poppy-Playtime-Chapter-1-PS4.pkg": {
+      "title_id": "CUSA24021",
+      "region": "USA",
+      "name": "Poppy Playtime: Chapter 1",
+      "size": 2500000000,
+      "version": "1.00",
+      "release": "12-15-2022",
+      "min_fw": "9.00",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2026/02/Poppy-Playtime-Chapter-1-PS4-PKG-241x300.webp"
     },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Stardew-Valley-PS4.pkg": {
       "title_id": "CUSA06840",
