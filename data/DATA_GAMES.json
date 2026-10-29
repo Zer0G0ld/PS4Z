@@ -1,5 +1,548 @@
 {
   "DATA": {
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Assassins-Creed-Black-Flag-PS4.pkg": {
+      "title_id": "CUSA00009",
+      "region": "EUR",
+      "name": "Assassin's Creed IV Black Flag",
+      "size": 6762000000,
+      "version": "1.04",
+      "release": "10-29-2013",
+      "min_fw": "5.05",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2018/10/Assassins-Creed-4-Black-Flag-Freedom-Cry-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Bendy-and-The-Dark-Revival-PS4.pkg": {
+      "title_id": "CUSA38355",
+      "region": "EUR",
+      "name": "Bendy and The Dark Revival",
+      "size": 3939893248,
+      "version": "1.00",
+      "release": "11-15-2022",
+      "min_fw": "9.50",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2025/07/Bendy-and-the-Dark-Revival-PS4-PKG-585x729.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Battle-Stadium-DON-PS4.pkg": {
+      "title_id": "SLPS2567",
+      "region": "JAP",
+      "name": "Battle Stadium D.O.N (PS4 Port)",
+      "size": 279969792,
+      "version": "1.00",
+      "release": "07-20-2006",
+      "min_fw": "5.05",
+      "cover_url": "https://1.bp.blogspot.com/-E_wcMvW6IgQ/YrU1sgoeY4I/AAAAAAAAJ-U/z4dKqZOMsRkJVQTBeMNqpAe0mH6Hk8HZQCNcBGAsYHQ/s0/31.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-PS4.pkg": {
+      "title_id": "CUSA02290",
+      "region": "USA",
+      "name": "Call of Duty: Black Ops",
+      "size": 8000000000,
+      "version": "1.00",
+      "release": "11-09-2010",
+      "min_fw": "5.05",
+      "cover_url": "https://cdn.awsli.com.br/2500x2500/2992/2992030/produto/402080720/f9dde080bd274e11839f563f920736d6-xadxn70z4x.png",
+      "dlcs": [
+        {
+          "name": "Patch Update (v1.08)",
+          "size": 123456789,
+          "version": "1.08",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-Fix-1.08.pkg"
+        },
+        {
+          "name": "DLC Pack (Season Pass)",
+          "size": 987654321,
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-DLC.pkg"
+        }
+      ]
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-II-PS4.pkg": {
+      "title_id": "CUSA57548",
+      "region": "USA",
+      "name": "Call of Duty: Black Ops II",
+      "size": 16000000000,
+      "version": "1.10",
+      "release": "11-13-2012",
+      "min_fw": "5.05",
+      "cover_url": "https://cdn.awsli.com.br/2500x2500/2835/2835417/produto/402172575/ad1c621ca4fb41b0baa377f777315013-16yqavrrf9.png",
+      "dlcs": [
+        {
+          "name": "Patch Update (v1.10)",
+          "size": 123456789,
+          "version": "1.10",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-II-Fix-1.10.pkg"
+        },
+        {
+          "name": "DLC Pack (Season Pass)",
+          "size": 987654321,
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-II-DLC.rar"
+        }
+      ]
+    },
+        "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Black-Ops-III-PS4.pkg": {
+      "title_id": "CUSA02290",
+      "region": "USA",
+      "name": "Call of Duty: Black Ops III",
+      "size": 50000000000,
+      "version": "1.00", 
+      "release": "11-06-2015",
+      "min_fw": "5.05",
+      "cover_url": "https://m.media-amazon.com/images/I/615S2VgX71L._AC_UF1000,1000_QL80_.jpg",
+      
+            "dlcs": [
+        {
+          "name": "DLC: Awakening",
+          "size": 1550000, 
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call_of_Duty_Black_Ops_III_Awakening_DLC-CUSA02624.pkg"
+        },
+        {
+          "name": "DLC: Descent",
+          "size": 831000000, 
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call_of_Duty_Black_Ops_III_Descent_DLC-CUSA02624.pkg"
+        },
+        {
+          "name": "DLC: Eclipse",
+          "size": 7280000000, 
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call_of_Duty_Black_Ops_III_Eclipse_DLC-CUSA02624.pkg"
+        },
+        {
+          "name": "DLC: Salvation",
+          "size": 12650000000, 
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call_of_Duty_Black_Ops_III_Salvation_DLC-CUSA02624.pkg"
+        },
+        {
+          "name": "DLC: The Giant (Zombies Bonus Map)",
+          "size": 1630000000, 
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call_of_Duty_Black_Ops_III_The_Giant_Zombies_Bonus_Map_DLC-CUSA02624.pkg"
+        },
+        {
+          "name": "DLC: Zombies Chronicles",
+          "size": 15660000000, 
+          "version": "1.00",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call_of_Duty_Black_Ops_III_Zombies_Chronicles_DLC-CUSA02624.pkg"
+        },
+        {
+          "name": "Update (Patch) v1.33",
+          "size": 123456789, 
+          "version": "1.33",
+          "link": "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call_of_Duty_Black_Ops_III_Update_v1_33-CUSA02624.pkg"
+        }
+      ]
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Ghosts-PS4.pkg": {
+      "title_id": "CUSA02291",
+      "region": "USA",
+      "name": "Call of Duty Ghosts",
+      "size": 16000000000,
+      "version": "1.00",
+      "release": "11-13-2012",
+      "min_fw": "5.05",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2018/05/Call-of-Duty-Ghosts-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Call-of-Duty-Modern-Warfare-PS4.pkg": {
+      "title_id": "CUSA08829",
+      "region": "USA",
+      "name": "Call of Duty Modern Warfare",
+      "size": 100000000000,
+      "version": "1.00",
+      "release": "10-25-2019",
+      "min_fw": "5.05",
+      "cover_url": "https://cdn.awsli.com.br/2500x2500/2835/2835417/produto/354715354/cmw1-ps4-tncissot36.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Celeste-PS4.pkg": {
+      "title_id": "CUSA11302",
+      "region": "USA",
+      "name": "Celeste",
+      "size": 1424752640,
+      "version": "1.05",
+      "release": "01-25-2018",
+      "min_fw": "5.05",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2024/09/Celeste-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/%5BSPSX%5D-DELTARUNE-CUSA52463-JAPAN-v1.00-%289.00%2B%29-PS4.pkg": {
+      "title_id": "CUSA52463",
+      "region": "JAP",
+      "name": "DELTARUNE",
+      "size": 514850816,
+      "version": "1.00",
+      "release": "10-31-2025",
+      "min_fw": "9.00",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBiW6c_eDWvZDv2tlUkc8QeFcpVnTAJu9dL2Ka3dM3E7CNJdU4xe3XMTor&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Elden-Ring-Shadow-of-the-Erdtree-PS4.pkg": {
+      "title_id": "CUSA18723",
+      "region": "EUR",
+      "name": "Elden Ring: Shadow of the Erdtree",
+      "size": 33930000000,
+      "version": "1.00",
+      "release": "06-21-2024",
+      "min_fw": "9.00",
+      "cover_url": "https://cdn.awsli.com.br/600x1000/1634/1634877/produto/322701150/captura-de-tela-2024-12-02-a-s-23-04-46-n7q5kv32xs.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FIFA-23-PS4.pkg": {
+      "title_id": "CUSA31879",
+      "region": "EUR",
+      "name": "FIFA 23",
+      "size": 45000000000,
+      "version": "1.00",
+      "release": "09-30-2022",
+      "min_fw": "9.00",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2024/09/EA-SPORTS_-FIFA-23-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/GigaBash-PS4.pkg": {
+      "title_id": "CUSA19322",
+      "region": "USA",
+      "name": "GigaBash",
+      "size": 4500000000,
+      "version": "1.00",
+      "release": "08-05-2022",
+      "min_fw": "5.05",
+      "cover_url": "https://i5.walmartimages.com/seo/Gigabash-for-PlayStation-4-Limited-Run-543_92b8dbd7-449e-485d-a593-89837502ce03.92d06624690cce2b842ce3510174ea66.jpeg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Hollow-Knight-Voidheart-PS4.pkg": {
+      "title_id": "CUSA13616",
+      "region": "EUR",
+      "name": "Hollow Knight: Voidheart Edition",
+      "size": 15441985536,
+      "version": "1.00",
+      "release": "09-25-2018",
+      "min_fw": "5.05",
+      "cover_url": "https://ngcpgames.com.br/cdn/shop/files/hollow-ps4-x88o4xy6w4.png?v=1792204529&width=640"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Poppy-Playtime-Chapter-1-PS4.pkg": {
+      "title_id": "CUSA24021",
+      "region": "USA",
+      "name": "Poppy Playtime: Chapter 1",
+      "size": 2500000000,
+      "version": "1.00",
+      "release": "12-15-2022",
+      "min_fw": "9.00",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2026/02/Poppy-Playtime-Chapter-1-PS4-PKG-241x300.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Poppy-Playtime-Chapter-2-PS4.pkg": {
+      "title_id": "CUSA24022",
+      "region": "USA",
+      "name": "Poppy Playtime: Chapter 2",
+      "size": 8180000000,
+      "version": "1.00",
+      "release": "2023",
+      "min_fw": "9.00",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLW6LH4yulFCyI_FoBNapRH3PZA9DFljFx8V-x7jhYCg&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Poppy-Playtime-Chapter-3-PS4.pkg": {
+      "title_id": "CUSA24023",
+      "region": "USA",
+      "name": "Poppy Playtime: Chapter 3",
+      "size": 8610000000,
+      "version": "1.00",
+      "release": "2024",
+      "min_fw": "9.00",
+      "cover_url": "https://acdn-us.mitiendanube.com/stores/001/482/801/products/comprar-capitulo-3-ps4-digital-original-b7a10ae66f36bf008b17467392826651-640-0.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Poppy-Playtime-Chapter-4-PS4.pkg": {
+      "title_id": "CUSA24024",
+      "region": "USA",
+      "name": "Poppy Playtime: Chapter 4",
+      "size": 4900000000,
+      "version": "1.00",
+      "release": "2025",
+      "min_fw": "9.00",
+      "cover_url": "https://cdn.awsli.com.br/600x450/2719/2719500/produto/359428952/1021-yds88tjb6t.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Poppy-Playtime-Chapter-5-PS4.pkg": {
+      "title_id": "CUSA24025",
+      "region": "USA",
+      "name": "Poppy Playtime: Chapter 5",
+      "size": 10300000000,
+      "version": "1.00",
+      "release": "2026",
+      "min_fw": "9.00",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvkqOVzxNTqs1Rj_kdGPz6UTfwKf75OTanrLEe5TIp_7kZHSRGsF83_mdt&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Stardew-Valley-PS4.pkg": {
+      "title_id": "CUSA06840",
+      "region": "USA",
+      "name": "Stardew Valley",
+      "size": 358088704,
+      "version": "1.62",
+      "release": "11-15-2016",
+      "min_fw": "5.05",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkfTn1_DN4ptSaaoCW2wl48aFzfFcFNWpB8Han5GxcoFG_1rCLBAmqYA1g&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Subnautica-PS4.pkg": {
+      "title_id": "CUSA13529",
+      "region": "USA",
+      "name": "Subnautica",
+      "size": 2905407488,
+      "version": "1.21",
+      "release": "12-04-2018",
+      "min_fw": "5.05",
+      "cover_url": "https://m.media-amazon.com/images/I/61U9XQ+K6LL._AC_UF1000,1000_QL80_.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/INSIDE-PS4.pkg": {
+      "title_id": "CUSA02754",
+      "region": "EUR",
+      "name": "INSIDE",
+      "size": 1181286400,
+      "version": "1.01",
+      "release": "06-29-2016",
+      "min_fw": "5.05",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVn1bYbJWAiyGHZo7fRRDQqRUbA4gEBawfDffgep063ccnlsymlObNRQ&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Inside-My-Radio-PS4.pkg": {
+      "title_id": "CUSA03871",
+      "region": "USA",
+      "name": "Inside My Radio",
+      "size": 961937408,
+      "version": "1.00",
+      "release": "11-17-2015",
+      "min_fw": "5.05",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2024/09/Inside-My-Radio-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Inscryption-PS4.pkg": {
+      "title_id": "CUSA32884",
+      "region": "EUR",
+      "name": "Inscryption",
+      "size": 2387148800,
+      "version": "1.02",
+      "release": "08-30-2022",
+      "min_fw": "5.05",
+      "cover_url": "https://cdn.awsli.com.br/300x300/2835/2835417/produto/354715770/inscryption-ps4midia-digital-30164946-6maurwkruc.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Injustice-2-PS4.pkg": {
+      "title_id": "CUSA10688",
+      "region": "EUR",
+      "name": "Injustice 2",
+      "size": 27393654784,
+      "version": "1.04",
+      "release": "05-16-2017",
+      "min_fw": "5.05",
+      "cover_url": "https://cdn.awsli.com.br/2500x2500/2835/2835417/produto/354713187/injus-c15r9m8v5s.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/It-Takes-Two-PS4.pkg": {
+      "title_id": "CUSA16746",
+      "region": "EUR",
+      "name": "It Takes Two",
+      "size": 36243636224,
+      "version": "1.03",
+      "release": "03-26-2021",
+      "min_fw": "5.05",
+      "cover_url": "https://ngcpgames.com.br/cdn/shop/files/it-takes-ps4-2hg8fksbcs.png?v=1792204790"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Jump-Force-PS4.pkg": {
+      "title_id": "CUSA11638",
+      "region": "EUR",
+      "name": "JUMP FORCE",
+      "size": 14200000000,
+      "version": "3.03",
+      "release": "02-15-2019",
+      "min_fw": "5.05",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2020/07/Jump-Force-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Street-Fighter-IV-PS4.pkg": {
+      "title_id": "CUSA01839",
+      "region": "EUR",
+      "name": "Street Fighter IV",
+      "size": 8547663872,
+      "version": "1.07",
+      "release": "02-17-2015",
+      "min_fw": "5.05",
+      "cover_url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/21660/header.jpg?t=1644282876"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Skyrim-Special-Edition.pkg": {
+      "title_id": "CUSA05333",
+      "region": "EUR",
+      "name": "The Elder Scrolls V: Skyrim Special Edition",
+      "size": 31880491008,
+      "version": "1.00",
+      "release": "10-28-2016",
+      "min_fw": "5.05",
+      "cover_url": "https://m.media-amazon.com/images/I/81GA31qG2QL._AC_UF1000,1000_QL80_.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/The-King-of-Fighters-2002-Unlimited-Match-PS4.pkg": {
+      "title_id": "CUSA18001",
+      "region": "USA",
+      "name": "The King of Fighters 2002 Unlimited Match",
+      "size": 588800000,
+      "version": "1.00",
+      "release": "05-07-2019",
+      "min_fw": "5.05",
+      "cover_url": "https://m.media-amazon.com/images/I/810Uq8Qr+SL._AC_UF1000,1000_QL80_.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/The-King-of-Fighters-XIII-Global-Match-PS4.pkg": {
+      "title_id": "CUSA33276",
+      "region": "USA",
+      "name": "The King of Fighters XIII Global Match",
+      "size": 2500000000,
+      "version": "1.00",
+      "release": "11-16-2023",
+      "min_fw": "5.05",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2024/09/THE-KING-OF-FIGHTERS-XIII-GLOBAL-MATCH-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Marvels-Spider-Man-PS4.pkg": {
+      "title_id": "CUSA02299",
+      "region": "USA",
+      "name": "Marvel's Spider-Man",
+      "size": 63854608384,
+      "version": "1.19",
+      "release": "09-07-2018",
+      "min_fw": "6.72",
+      "cover_url": "https://cdn.awsli.com.br/800x800/53/53761/produto/29815822/4677d91514.jpg"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Marvels-Spider-Man-Miles-Morales-PS4.pkg": {
+      "title_id": "CUSA02299",
+      "region": "USA",
+      "name": "Marvels Spider Man Miles Morales",
+      "size": 63854608384,
+      "version": "1.19",
+      "release": "09-07-2018",
+      "min_fw": "6.72",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2024/03/Marvels-Spider-Man-Miles-Morales-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/NBA-2K25.pkg": {
+      "title_id": "CUSA42312",
+      "region": "EUR",
+      "name": "NBA 2K25",
+      "size": 47426961408,
+      "version": "1.05",
+      "release": "09-06-2024",
+      "min_fw": "9.00",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9r2fhX1ZFm5chFKbXxIoneHyQ9VMnGvoLmXWb-lZ8qDrGQgINIhY7HZo&s=10"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/NBA-2K26-PS4-PS4.pkg": {
+      "title_id": "CUSA42312",
+      "region": "EUR",
+      "name": "NBA 2K26",
+      "size": 47426961408,
+      "version": "1.05",
+      "release": "09-06-2024",
+      "min_fw": "9.00",
+      "cover_url": "https://www.superpsx.com/wp-content/uploads/2025/09/NBA-2K26-PS4-PKG.webp"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/FPKGi_v1.10.0-release.pkg": {
+      "title_id": "LAPY20001",
+      "region": "APP",
+      "name": "FPKGi - Loja Homebrew",
+      "size": 89653248,
+      "version": "1.10.0",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/fpkgi.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Xplorer.pkg": {
+      "title_id": "LAPY20009",
+      "region": "APP",
+      "name": "PS4-Xplorer 2.0",
+      "size": 66904064,
+      "version": "2.08",
+      "release": "2024",
+      "min_fw": "4.55",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/ps4xplorer.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/YouTube.pkg": {
+      "title_id": "CUSA01116",
+      "region": "APP",
+      "name": "YouTube (NoPSN)",
+      "size": 137130000,
+      "version": "2.32",
+      "release": "2022",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Youtube.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Netflix.pkg": {
+      "title_id": "CUSA00127",
+      "region": "APP",
+      "name": "Netflix (NoPSN)",
+      "size": 61060000,
+      "version": "1.53",
+      "release": "2021",
+      "min_fw": "9.00",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/Netflix.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Apollo-Save-Tool.pkg": {
+      "title_id": "APOL00004",
+      "region": "APP",
+      "name": "Apollo Save Tool",
+      "size": 22675000,
+      "version": "2.3.2",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Apollo-Save-Tool.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Cheats-Manager.pkg": {
+      "title_id": "CHTM00777",
+      "region": "APP",
+      "name": "Cheats Manager",
+      "size": 19200000,
+      "version": "1.2.2",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/PS4-Cheats.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Icon-Mask.pkg": {
+      "title_id": "LAPY20007",
+      "region": "APP",
+      "name": "Icon Mask",
+      "size": 74040000,
+      "version": "1.16",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Icon-Mask.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Itemzflow-Game-Manager.pkg": {
+      "title_id": "ITEM00001",
+      "region": "APP",
+      "name": "Itemzflow Game Manager",
+      "size": 27120000,
+      "version": "1.08",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/itemzflow.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/PS4-Temperature.pkg": {
+      "title_id": "LAPY20006",
+      "region": "APP",
+      "name": "PS4 Temperature",
+      "size": 50330000,
+      "version": "1.07",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/refs/heads/main/src/assets/PS4-Temperute.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Remote-Package-Installer.pkg": {
+      "title_id": "LAPY20003",
+      "region": "APP",
+      "name": "Remote Package Installer",
+      "size": 4260000,
+      "version": "1.02",
+      "release": "2022",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Remote-Package-Installer.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Avatar-Changer.pkg": {
+      "title_id": "LAPY20002",
+      "region": "APP",
+      "name": "Avatar Changer",
+      "size": 88000000,
+      "version": "1.00",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/Avatar-Changer.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/ezremote_client_v2.05.pkg": {
+      "title_id": "LAPY20008",
+      "region": "APP",
+      "name": "ezRemote Client",
+      "size": 52750000,
+      "version": "2.05",
+      "release": "2024",
+      "min_fw": "5.05",
+      "cover_url": "https://raw.githubusercontent.com/Zer0G0ld/ps4z/main/src/assets/ezRemoteClient.png"
+    },
     "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/Black-PC-Port-PTBR.rar": {
       "title_id": "PC-001",
       "region": "PC",
@@ -69,6 +612,16 @@
       "release": "2026",
       "min_fw": "9.00",
       "cover_url": "https://cdn.awsli.com.br/2500x2500/2992/2992030/produto/400714775/a6fa3171e8104cbc8f9a367bd66628e3-grh54k7w6b.png"
+    },
+    "https://huggingface.co/datasets/Zer0G0ld/ps4z/resolve/main/The-Incredible-Hulk-PS2_PS4-Ported.pkg": {
+      "title_id": "CUSA99901",
+      "region": "USA",
+      "name": "The Incredible Hulk (PS4 Ported)",
+      "size": 2590000000,
+      "version": "1.00",
+      "release": "2026",
+      "min_fw": "5.05",
+      "cover_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAM4GXQBFuCk50icuc_WLlhwcTV5IPp_Y1siGeY3I-9pzBDHaz757JsMY&s=10"
     }
   }
 }

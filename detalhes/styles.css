@@ -309,3 +309,79 @@ body {
     .hub-header { padding: 0 10px; }
     .nav-plataformas { display: none; } /* Esconde o menu no celular */
 }
+
+/* --- SEÇÃO DE DLCs e PATCHES --- */
+.steam-dlc-section {
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+.steam-dlc-section h3 {
+    color: #66c0f4;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dlc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dlc-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(102, 192, 244, 0.2);
+    border-radius: 4px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.dlc-card:hover {
+    background: rgba(102, 192, 244, 0.1);
+    border-color: rgba(102, 192, 244, 0.5);
+}
+
+.dlc-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dlc-name {
+    color: white;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.dlc-meta {
+    color: #8f98a0;
+    font-size: 0.85em;
+}
+
+.btn-dlc {
+    background: #2a475e;
+    color: #66c0f4;
+    padding: 8px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-dlc:hover {
+    background: #66c0f4;
+    color: #1b2838;
+}
