@@ -1,7 +1,8 @@
 // footer.js
 document.addEventListener("DOMContentLoaded", () => {
     // Verifica se estamos na pasta /detalhes/
-    const caminhoFooter = window.location.pathname.includes('/detalhes/') ? '../footer.html' : 'footer.html';
+    const isSubpasta = window.location.pathname.includes('/detalhes/');
+    const caminhoFooter = isSubpasta ? '../footer.html' : 'footer.html';
     
     fetch(caminhoFooter)
         .then(response => {
@@ -11,12 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(html => {
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = html;
-            
             const footerElement = tempDiv.querySelector('footer');
-            
             if (footerElement) {
                 document.body.appendChild(footerElement);
             }
         })
-        .catch(erro => console.error("Erro ao carregar o footer:", erro));
+        .catch(erro => console.log("Aviso: O footer não foi encontrado ou já está no HTML."));
 });
