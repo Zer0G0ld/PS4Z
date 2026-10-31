@@ -1,10 +1,20 @@
 /* =========================================
-   PÁGINA DE DETALHES (ESTILO STEAM)
+   PÁGINA DE DETALHES (ESTILO STEAM PREMIUM)
    ========================================= */
 
+:root {
+    --bg-main: #0f0f11;
+    --bg-header: #171a21;
+    --bg-panel: #1a2530;
+    --ps-blue: #0070d1;
+    --steam-blue: #66c0f4;
+    --text-light: #c6d4df;
+    --text-muted: #8f98a0;
+}
+
 body {
-    background-color: #1b2838;
-    color: #c6d4df;
+    background-color: var(--bg-main);
+    color: var(--text-light);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -13,20 +23,19 @@ body {
     min-height: 100vh;
 }
 
-/* --- HEADER --- */
+/* --- HEADER PADRONIZADO --- */
 .hub-header {
-    background-color: #171a21;
+    background-color: var(--bg-header);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 30px;
     height: 70px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
-    box-sizing: border-box;
+    gap: 20px;
 }
 
 .logo {
@@ -39,52 +48,67 @@ body {
 
 .nav-plataformas {
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    align-items: center;
+    height: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
+
+.nav-plataformas::-webkit-scrollbar { display: none; }
 
 .nav-plataformas a {
-    color: #8f98a0;
+    color: var(--text-muted);
     text-decoration: none;
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 0.9em;
+    padding: 0 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.85em;
     text-transform: uppercase;
-    border-radius: 4px;
     transition: 0.2s;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
 }
 
-.nav-plataformas a:hover, .nav-plataformas a.active {
-    background-color: #202d39;
-    color: white;
-}
+.nav-plataformas a:hover { color: white; }
 
 .btn-jb {
-    background: #e63946;
+    background: linear-gradient(135deg, #ff4d5e, #d90429);
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: bold;
-    font-size: 0.9em;
-    transition: 0.2s;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+    white-space: nowrap;
 }
-.btn-jb:hover { background: #ff4d5e; }
 
-/* --- BANNER SUPERIOR --- */
+.btn-jb:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+    color: white;
+}
+
+/* --- BANNER SUPERIOR (Fundo) --- */
 .steam-banner {
     width: 100%;
-    height: 300px; /* Altura equilibrada */
+    height: 350px;
     background-size: cover;
-    background-position: center;
+    background-position: center 20%; /* Foca mais no topo da imagem */
     position: relative;
-    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    /* Escurece o banner para o texto e o card se destacarem */
+    box-shadow: inset 0 -150px 150px -50px var(--bg-main);
 }
 
 /* --- CONTAINER PRINCIPAL --- */
 .steam-container {
     max-width: 1100px;
-    margin: -120px auto 50px auto; /* Puxa o conteúdo para cima do banner */
+    margin: -100px auto 50px auto; 
     position: relative;
     z-index: 2;
     display: flex;
@@ -94,21 +118,23 @@ body {
     width: 90%;
 }
 
-/* --- CABEÇALHO DO JOGO --- */
+/* --- CABEÇALHO DO JOGO (Título e Tags) --- */
 .steam-header {
-    background: linear-gradient(to right, #2a475e 0%, #1b2838 100%);
-    padding: 20px 30px;
-    border-radius: 4px;
+    background: rgba(23, 26, 33, 0.85); /* Efeito Vidro */
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .steam-header h1 {
     font-size: 2.5em;
     margin: 0 0 10px 0;
     color: white;
-    font-weight: 300;
+    font-weight: 700;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
 }
 
@@ -119,19 +145,21 @@ body {
 }
 
 .steam-tag {
-    background: rgba(0, 0, 0, 0.4);
-    color: #66c0f4;
-    padding: 4px 10px;
-    border-radius: 3px;
+    background: rgba(102, 192, 244, 0.1);
+    border: 1px solid rgba(102, 192, 244, 0.3);
+    color: var(--steam-blue);
+    padding: 5px 12px;
+    border-radius: 4px;
     font-size: 0.8em;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* --- CONTEÚDO (IMAGEM E INFOS) --- */
+/* --- CONTEÚDO (Imagem e Infos) --- */
 .steam-content {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .steam-cover-col {
@@ -143,29 +171,33 @@ body {
 
 .steam-cover-img {
     width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .steam-info-col {
     width: 65%;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding: 20px 30px;
+    background: var(--bg-panel);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .steam-description {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #acdbf5;
-    margin-bottom: 30px;
+    color: var(--text-light);
+    margin-bottom: 25px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: 20px;
 }
 
+/* --- LISTA DE METADADOS --- */
 .steam-meta-list {
     list-style: none;
     padding: 0;
@@ -173,59 +205,65 @@ body {
 }
 
 .steam-meta-list li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px dashed rgba(255,255,255,0.1);
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
 .steam-meta-list li span:first-child {
-    color: #556772;
+    color: var(--text-muted);
+    font-weight: 600;
 }
 
 .steam-meta-list li span:last-child {
-    color: #66c0f4;
+    color: var(--steam-blue);
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 /* --- BOTÕES DE AÇÃO --- */
 .steam-actions {
     display: flex;
     gap: 15px;
+    margin-top: auto; /* Empurra os botões para o final do card */
 }
 
 .btn-steam-green {
-    background: linear-gradient(to right, #4c6b22, #8bc34a);
+    background: linear-gradient(135deg, #4c6b22, #8bc34a);
     color: white;
     padding: 15px 30px;
-    border-radius: 3px;
+    border-radius: 6px;
     font-weight: bold;
     text-decoration: none;
     font-size: 1.1em;
-    transition: 0.2s;
+    transition: 0.3s ease;
     flex-grow: 1;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
 }
 
 .btn-steam-green:hover, .btn-steam-green:focus {
-    background: linear-gradient(to right, #5a7d29, #9ccc65);
-    outline: 2px solid white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 195, 74, 0.5);
+    color: white;
 }
 
 .btn-steam-blue {
-    background: #2a475e;
-    color: #66c0f4;
+    background: rgba(102, 192, 244, 0.1);
+    border: 1px solid rgba(102, 192, 244, 0.3);
+    color: var(--steam-blue);
     padding: 15px 30px;
-    border-radius: 3px;
+    border-radius: 6px;
     font-weight: bold;
     text-decoration: none;
     font-size: 1.1em;
-    transition: 0.2s;
+    transition: 0.3s ease;
     text-align: center;
     display: flex;
     align-items: center;
@@ -234,18 +272,124 @@ body {
 }
 
 .btn-steam-blue:hover, .btn-steam-blue:focus {
-    background: #66c0f4;
-    color: #1b2838;
-    outline: 2px solid white;
+    background: var(--steam-blue);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 192, 244, 0.4);
 }
 
-/* --- RODAPÉ --- */
+/* --- SEÇÃO DE DLCs e PATCHES --- */
+.steam-dlc-section {
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 25px;
+}
+
+.steam-dlc-section h3 {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.steam-dlc-section h4 {
+    color: var(--text-muted);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0;
+}
+
+.dlc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dlc-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha o texto e o botão na mesma linha */
+    transition: 0.3s;
+}
+
+.dlc-card:hover {
+    background: rgba(102, 192, 244, 0.1);
+    border-color: rgba(102, 192, 244, 0.4);
+    transform: translateX(5px); /* Efeito de deslizar para a direita */
+}
+
+.dlc-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: 15px; /* Evita que o texto cole no botão */
+}
+
+.dlc-name {
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    /* Corta o texto se for muito grande com "..." */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 350px;
+}
+
+.dlc-meta {
+    color: var(--text-muted);
+    font-size: 0.8em;
+}
+
+.btn-dlc {
+    background: rgba(102, 192, 244, 0.1);
+    border: 1px solid rgba(102, 192, 244, 0.3);
+    color: var(--steam-blue);
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85em;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap; /* Impede que o botão quebre em duas linhas */
+}
+
+.btn-dlc:hover {
+    background: var(--steam-blue);
+    color: #000;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 800px) {
+    .steam-content { flex-direction: column; }
+    .steam-cover-col { width: 100%; align-items: center; }
+    .steam-cover-img { width: 60%; }
+    .steam-info-col { width: 100%; padding: 20px; }
+    .steam-banner { height: 200px; }
+    .steam-container { margin-top: -50px; }
+    .steam-header h1 { font-size: 1.8em; }
+    .hub-header { padding: 0 10px; }
+    .steam-actions { flex-direction: column; }
+}
+
+/* --- RODAPÉ (FOOTER) --- */
 .hub-footer {
-    background-color: #171a21;
+    background-color: #0b0d10; /* Fundo mais escuro que o body para dar contraste */
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     width: 100%;
-    padding: 40px 20px;
-    margin-top: auto; /* Empurra o footer para o final da página */
+    padding: 40px 20px 30px 20px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -257,131 +401,82 @@ body {
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    gap: 20px;
+    gap: 25px;
     text-align: center;
 }
 
+/* Logo do Rodapé */
 .footer-logo {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 900;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(102, 192, 244, 0.3);
+    text-shadow: 0 0 15px rgba(102, 192, 244, 0.4); /* Brilho azulado */
+    margin-bottom: 5px;
 }
 
+/* Links do Rodapé (Home, Desbloqueio, GitHub) */
 .footer-links {
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Mais espaço entre os links */
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-links a {
-    color: #8f98a0;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 1em;
-    font-weight: bold;
-    transition: all 0.2s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
     padding: 5px 10px;
-    border-radius: 4px;
 }
 
+.footer-links a i {
+    font-size: 1.1em;
+}
+
+/* Efeito Hover nos Links do Rodapé */
 .footer-links a:hover, .footer-links a:focus {
-    color: white;
-    background-color: #202d39;
-    outline: 2px solid #66c0f4;
+    color: var(--steam-blue);
+    transform: translateY(-2px); /* Sobe levemente no hover */
+    outline: none;
+    text-shadow: 0 0 10px rgba(102, 192, 244, 0.5);
+}
+
+/* Textos Informativos do Rodapé */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Linha separadora */
+    padding-top: 25px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .footer-info p {
-    margin: 5px 0;
-    color: #8f98a0;
-    font-size: 0.9em;
-}
-
-/* --- RESPONSIVO --- */
-@media (max-width: 800px) {
-    .steam-content { flex-direction: column; }
-    .steam-cover-col { width: 100%; align-items: center; }
-    .steam-cover-img { width: 60%; }
-    .steam-info-col { width: 100%; padding: 15px; }
-    .steam-banner { height: 200px; }
-    .steam-container { margin-top: -80px; }
-    .steam-header h1 { font-size: 1.8em; }
-    .hub-header { padding: 0 10px; }
-    .nav-plataformas { display: none; } /* Esconde o menu no celular */
-}
-
-/* --- SEÇÃO DE DLCs e PATCHES --- */
-.steam-dlc-section {
-    margin-bottom: 30px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-}
-
-.steam-dlc-section h3 {
-    color: #66c0f4;
-    font-size: 1.2em;
-    margin-top: 0;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.dlc-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.dlc-card {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(102, 192, 244, 0.2);
-    border-radius: 4px;
-    padding: 12px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.2s;
-}
-
-.dlc-card:hover {
-    background: rgba(102, 192, 244, 0.1);
-    border-color: rgba(102, 192, 244, 0.5);
-}
-
-.dlc-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.dlc-name {
-    color: white;
-    font-weight: bold;
-    font-size: 1.05em;
-}
-
-.dlc-meta {
-    color: #8f98a0;
+    margin: 0;
+    color: #5c6a76; /* Cor mais apagada para os textos de direitos */
     font-size: 0.85em;
+    line-height: 1.5;
 }
 
-.btn-dlc {
-    background: #2a475e;
-    color: #66c0f4;
-    padding: 8px 15px;
-    border-radius: 3px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
+.footer-info p:first-child {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 5px;
 }
 
-.btn-dlc:hover {
-    background: #66c0f4;
-    color: #1b2838;
+/* Responsividade: Ajuste no celular/PS4 em telas pequenas */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column; /* Coloca os links um embaixo do outro */
+        gap: 15px;
+    }
 }

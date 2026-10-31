@@ -24,12 +24,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 30px; /* Aumentei o padding lateral */
     height: 70px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra mais suave */
     position: sticky;
     top: 0;
     z-index: 100;
+    gap: 20px; /* Espaço entre Logo, Menu e Botão JB */
 }
 
 .logo {
@@ -42,18 +43,45 @@ body {
 
 .nav-plataformas {
     display: flex;
-    gap: 10px;
+    gap: 5px; /* Reduzi o gap para caber tudo */
+    align-items: center;
+    height: 100%; /* Faz o menu ocupar a altura do header */
+    overflow-x: auto; /* Permite rolar o menu no celular/PS4 sem quebrar o layout */
+    scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+
+.nav-plataformas::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no Chrome */
 }
 
 .nav-plataformas a {
     color: var(--text-muted);
     text-decoration: none;
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 0.9em;
+    padding: 0 12px; /* Ajustei o padding */
+    height: 100%; /* Faz o link ter a altura toda do header */
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.85em;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 0; /* Tira as bordas arredondadas do link */
     transition: 0.2s;
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas */
+    border-bottom: 3px solid transparent; /* Prepara a borda para o ativo */
+}
+
+
+/* O Botão Ativo (PS4, PC, etc) */
+.nav-plataformas a.active {
+    color: white;
+    border-bottom: 3px solid var(--steam-blue); /* A linha azul agora fica colada no fundo */
+    text-shadow: 0 0 10px rgba(102, 192, 244, 0.4);
+    background: linear-gradient(to top, rgba(102, 192, 244, 0.1), transparent); /* Leve gradiente no fundo */
+}
+
+/* Efeito ao passar o mouse (sem mudar a cor de fundo, só o texto) */
+.nav-plataformas a:hover {
+    color: white;
 }
 
 .nav-plataformas a:hover, .nav-plataformas a.active {
@@ -62,16 +90,24 @@ body {
 }
 
 .btn-jb {
-    background: #e63946;
+    background: linear-gradient(135deg, #ff4d5e, #d90429); /* Gradiente vermelho */
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: bold;
-    font-size: 0.9em;
-    transition: 0.2s;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4); /* Brilho vermelho */
+    white-space: nowrap;
 }
-.btn-jb:hover { background: #ff4d5e; }
+
+.btn-jb:hover {
+    transform: translateY(-2px); /* Sobe um pouquinho no hover */
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.6);
+    color: white;
+}
 
 /* --- MAIN HUB --- */
 .hub-main {
@@ -132,10 +168,26 @@ body {
 }
 
 .prateleira-header h2 {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: 400;
+    font-size: 1.4em;
+    font-weight: 700;
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-left: 15px; /* Espaço para a barra ao lado */
+}
+
+/* Cria a barrinha azul ao lado do título */
+.prateleira-header h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 80%;
+    background-color: var(--ps-blue);
+    border-radius: 4px;
 }
 
 .ver-mais {
@@ -150,9 +202,14 @@ body {
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    padding-bottom: 15px; /* Espaço para o scrollbar */
+    /* O SEGREDO ESTÁ AQUI: Adicionar padding no topo e embaixo */
+    padding: 15px 5px 25px 5px; 
     scroll-snap-type: x mandatory;
+    /* Garante que o card não seja cortado por outros elementos */
+    position: relative;
+    z-index: 1;
 }
+
 
 /* Esconde a barra de rolagem feia no PC, mas deixa ela bonita no PS4 */
 .scroll-horizontal::-webkit-scrollbar {
@@ -172,24 +229,28 @@ body {
 
 /* --- CARDS --- */
 .game-card {
-    background-color: var(--bg-card);
-    border-radius: 4px;
-    min-width: 180px; /* Fixa a largura do card na prateleira */
+    background-color: #1a2530; /* Fundo do card */
+    border-radius: 8px; /* Bordas mais arredondadas */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borda sutil */
+    min-width: 180px;
     max-width: 180px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s ease; /* Transição suave para o hover */
     scroll-snap-align: start;
 }
 
 .game-card:hover, .game-card:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(102, 192, 244, 0.4);
-    outline: 2px solid var(--steam-blue);
+    transform: translateY(-8px); /* Sobe um pouco mais, mas sem crescer para os lados */
+    box-shadow: 0 12px 20px rgba(102, 192, 244, 0.3);
+    border-color: rgba(102, 192, 244, 0.6);
+    outline: none;
+    z-index: 2; /* Garante que o card fique na frente dos outros */
 }
+
 
 .cover-wrapper {
     position: relative;
@@ -237,16 +298,27 @@ body {
 }
 
 .download-btn {
-    background: var(--green-btn);
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--steam-blue);
+    padding: 10px;
+    border-radius: 6px; /* Menos arredondado que antes para caber melhor */
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.85em;
     text-align: center;
-    pointer-events: none; /* Deixa o clique no card inteiro */
+    pointer-events: none;
+    transition: all 0.2s ease;
+    width: 100%; /* Força o botão a respeitar a largura do card */
+    box-sizing: border-box; /* Impede que o padding vaze */
 }
+
+
+.game-card:hover .download-btn {
+    background: var(--steam-blue);
+    color: #000;
+    border-color: var(--steam-blue);
+}
+
 
 /* Cores das Tarjas por Plataforma */
 .game-card.ps3-card .cover-wrapper::before { background-color: #000; }
@@ -359,11 +431,11 @@ body {
 
 /* --- RODAPÉ (FOOTER) --- */
 .hub-footer {
-    background-color: var(--bg-header);
+    background-color: #0b0d10; /* Fundo mais escuro que o body para dar contraste */
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     width: 100%;
-    padding: 40px 20px;
-    margin-top: 60px; /* Empurra o footer para baixo */
+    padding: 40px 20px 30px 20px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -375,51 +447,84 @@ body {
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    gap: 20px;
+    gap: 25px;
     text-align: center;
 }
 
+/* Logo do Rodapé */
 .footer-logo {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 900;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(102, 192, 244, 0.3);
+    text-shadow: 0 0 15px rgba(102, 192, 244, 0.4); /* Brilho azulado */
+    margin-bottom: 5px;
 }
 
+/* Links do Rodapé (Home, Desbloqueio, GitHub) */
 .footer-links {
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Mais espaço entre os links */
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-links a {
     color: var(--text-muted);
     text-decoration: none;
     font-size: 1em;
-    font-weight: bold;
-    transition: all 0.2s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
     padding: 5px 10px;
-    border-radius: 4px;
 }
 
+.footer-links a i {
+    font-size: 1.1em;
+}
+
+/* Efeito Hover nos Links do Rodapé */
 .footer-links a:hover, .footer-links a:focus {
-    color: white;
-    background-color: var(--bg-panel);
-    outline: 2px solid var(--steam-blue);
+    color: var(--steam-blue);
+    transform: translateY(-2px); /* Sobe levemente no hover */
+    outline: none;
+    text-shadow: 0 0 10px rgba(102, 192, 244, 0.5);
+}
+
+/* Textos Informativos do Rodapé */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Linha separadora */
+    padding-top: 25px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .footer-info p {
-    margin: 5px 0;
-    color: var(--text-muted);
-    font-size: 0.9em;
+    margin: 0;
+    color: #5c6a76; /* Cor mais apagada para os textos de direitos */
+    font-size: 0.85em;
+    line-height: 1.5;
 }
 
-/* Garante que o body empurre o footer para baixo */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.footer-info p:first-child {
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+/* Responsividade: Ajuste no celular/PS4 em telas pequenas */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column; /* Coloca os links um embaixo do outro */
+        gap: 15px;
+    }
 }
 
 /* O conteúdo principal vai crescer para empurrar o footer */

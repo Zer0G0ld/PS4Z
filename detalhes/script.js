@@ -9,13 +9,12 @@ async function carregarDetalhes() {
     }
 
     try {
-        // Busca os dados apenas do DATA_GAMES.json agora
-        const jogos = await carregarDados();
+        const todosOsJogos = await carregarDados();
         
         const linkOriginal = decodeURIComponent(idJogo);
-        const jogo = jogos.find(j => j.link === linkOriginal);
+        const jogo = todosOsJogos.find(j => j.link === linkOriginal);
 
-        if (!jogo) throw new Error("Jogo não encontrado no banco de dados.");
+        if (!jogo) throw new Error("Item não encontrado no banco de dados.");
 
         document.getElementById('loading').style.display = 'none';
         const container = document.getElementById('conteudo');
@@ -24,35 +23,83 @@ async function carregarDetalhes() {
         const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/400x600/1b2838/66c0f4?text=Sem+Capa';
         
         const banner = document.getElementById('steam-banner');
-        banner.style.backgroundImage = `url('${imagemCapa}')`;
+        banner.style.backgroundImage = `linear-gradient(to bottom, rgba(15,15,17,0.3), rgba(15,15,17,1)), url('${imagemCapa}')`;
 
-        // Monta a lista de DLCs/Patches, se existirem
-        let htmlDlcs = '';
-        if (jogo.dlcs && jogo.dlcs.length > 0) {
-            htmlDlcs = `
+        let htmlExtras = '';
+        
+        // Pega o nome base do jogo para fazer o cruzamento de dados
+        const nomeBaseJogo = jogo.name.split(' [')[0].split(' (')[0].trim().toLowerCase();
+
+        const extrasRelacionados = todosOsJogos.filter(item => {
+            if (item.link === jogo.link) return false;
+            if (item.title_id === jogo.title_id) return true;
+            if (item.name.toLowerCase().includes(nomeBaseJogo)) return true;
+            return false;
+        });
+
+        if (extrasRelacionados.length > 0) {
+            const updates = extrasRelacionados.filter(i => obterTipo(i) === 'update');
+            const dlcs = extrasRelacionados.filter(i => obterTipo(i) === 'dlc');
+            
+            let htmlLista = '';
+
+            // FUNÇÃO MÁGICA QUE LIMPA O NOME (Retira o nome do jogo base do título da DLC)
+            const limparNome = (nomeCompleto) => {
+                let nomeLimpo = nomeCompleto.replace(new RegExp(nomeBaseJogo, 'gi'), '');
+                nomeLimpo = nomeLimpo.replace(/^[\s\-\(\)\[\]:]+|[\s\-\(\)\[\]:]+$/g, '');
+                return nomeLimpo || nomeCompleto; 
+            };
+
+            if (updates.length > 0) {
+                htmlLista += `<h4>Updates Oficiais</h4>`;
+                htmlLista += updates.map(ext => `
+                    <div class="dlc-card">
+                        <div class="dlc-info">
+                            <span class="dlc-name">${limparNome(ext.name)}</span>
+                            <span class="dlc-meta">v${ext.version} • ${formatarTamanho(ext.size)}</span>
+                        </div>
+                        <a href="${ext.link}" class="btn-dlc" target="_blank"><i class="fa-solid fa-download"></i> Baixar</a>
+                    </div>
+                `).join('');
+            }
+
+            if (dlcs.length > 0) {
+                htmlLista += `<h4>Conteúdos Extras (DLCs)</h4>`;
+                htmlLista += dlcs.map(ext => `
+                    <div class="dlc-card">
+                        <div class="dlc-info">
+                            <span class="dlc-name">${limparNome(ext.name)}</span>
+                            <span class="dlc-meta">v${ext.version} • ${formatarTamanho(ext.size)}</span>
+                        </div>
+                        <a href="${ext.link}" class="btn-dlc" target="_blank"><i class="fa-solid fa-download"></i> Baixar</a>
+                    </div>
+                `).join('');
+            }
+
+            htmlExtras = `
                 <div class="steam-dlc-section">
-                    <h3><i class="fa-solid fa-puzzle-piece"></i> Updates & DLCs</h3>
+                    <h3><i class="fa-solid fa-box-open"></i> Arquivos Adicionais para este Jogo</h3>
                     <div class="dlc-list">
-                        ${jogo.dlcs.map(dlc => `
-                            <div class="dlc-card">
-                                <div class="dlc-info">
-                                    <span class="dlc-name">${dlc.name}</span>
-                                    <span class="dlc-meta">v${dlc.version} • ${formatarTamanho(dlc.size)}</span>
-                                </div>
-                                <a href="${dlc.link}" class="btn-dlc" target="_blank"><i class="fa-solid fa-download"></i> Baixar</a>
-                            </div>
-                        `).join('')}
+                        ${htmlLista}
                     </div>
                 </div>
             `;
         }
 
-        // Monta o HTML com os ícones do Font Awesome
+        let tagTipo = '';
+        if (obterTipo(jogo) === 'app') tagTipo = 'Ferramenta / App';
+        else if (obterTipo(jogo) === 'theme') tagTipo = 'Tema';
+        else if (obterTipo(jogo) === 'emulator') tagTipo = 'Emulador';
+        else if (obterTipo(jogo) === 'dlc') tagTipo = 'DLC';
+        else if (obterTipo(jogo) === 'update') tagTipo = 'Update';
+        else tagTipo = 'Jogo Base';
+
         container.innerHTML = `
             <div class="steam-header">
                 <h1>${jogo.name}</h1>
                 <div class="steam-tags">
                     <span class="steam-tag">Região: ${jogo.region}</span>
+                    <span class="steam-tag" style="background: rgba(139, 195, 74, 0.2); color: #8bc34a; border-color: #8bc34a;">${tagTipo}</span>
                     <span class="steam-tag">Versão: ${jogo.version}</span>
                     <span class="steam-tag">Lançamento: ${jogo.release}</span>
                 </div>
@@ -64,19 +111,19 @@ async function carregarDetalhes() {
                 </div>
                 <div class="steam-info-col">
                     <p class="steam-description">
-                        Baixe ${jogo.name} para o seu dispositivo. Certifique-se de ter espaço suficiente no seu HD e o firmware atualizado.
+                        Baixe ${jogo.name} para o seu dispositivo. Certifique-se de ter espaço suficiente no seu HD e o firmware mínimo atualizado.
                     </p>
                     <ul class="steam-meta-list">
-                        <li><span>ID do Jogo:</span> <span>${jogo.title_id}</span></li>
+                        <li><span>ID do Sistema:</span> <span>${jogo.title_id || 'N/A'}</span></li>
                         <li><span>Firmware Mínimo:</span> <span>${jogo.min_fw || 'Desconhecido'}</span></li>
-                        <li><span>Tamanho Base:</span> <span>${formatarTamanho(jogo.size)}</span></li>
+                        <li><span>Tamanho do Arquivo:</span> <span>${formatarTamanho(jogo.size)}</span></li>
                     </ul>
 
-                    ${htmlDlcs} <!-- AQUI ENTRAM AS DLCs E PATCHES -->
+                    ${htmlExtras} <!-- AQUI ENTRAM AS DLCs E PATCHES VINCULADAS -->
 
                     <div class="steam-actions">
-                        <a href="${linkOriginal}" class="btn-steam-green" download target="_blank"><i class="fa-solid fa-download"></i> Baixar Jogo Base</a>
-                        <a href="../index.html" class="btn-steam-blue"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                        <a href="${linkOriginal}" class="btn-steam-green" download target="_blank"><i class="fa-solid fa-download"></i> Fazer Download</a>
+                        <a href="../index.html" class="btn-steam-blue"><i class="fa-solid fa-arrow-left"></i> Voltar à Loja</a>
                     </div>
                 </div>
             </div>
