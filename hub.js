@@ -19,9 +19,10 @@ async function iniciarHome() {
         const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/150';
         const idSeguro = encodeURIComponent(jogo.link);
         const plataforma = obterPlataforma(jogo);
+        const tipo = obterTipo(jogo);
         
         return `
-            <a href="detalhes/detalhes.html?id=${idSeguro}" class="game-card ${plataforma}-card">
+            <a href="detalhes/detalhes.html?id=${idSeguro}" class="game-card ${plataforma}-card ${tipo}-card">
                 <div class="cover-wrapper">
                     <img src="${imagemCapa}" class="game-cover" onerror="this.style.display='none'; this.parentElement.style.background='#222'">
                 </div>
@@ -38,23 +39,33 @@ async function iniciarHome() {
         containerResultados.style.display = 'none';
         prateleirasContainer.style.display = 'block';
 
+        // FILTRO ATUALIZADO: Separa por plataforma E por tipo (game)
         const grupos = {
-            ps5: todosOsJogos.filter(j => obterPlataforma(j) === "ps5"),
-            ps4: todosOsJogos.filter(j => obterPlataforma(j) === "ps4"),
-            ps3: todosOsJogos.filter(j => obterPlataforma(j) === "ps3"),
-            pc: todosOsJogos.filter(j => obterPlataforma(j) === "pc"),
-            apps: todosOsJogos.filter(j => obterPlataforma(j) === "apps"),
-            emulators: todosOsJogos.filter(j => obterPlataforma(j) === "emulators"),
-            themes: todosOsJogos.filter(j => obterPlataforma(j) === "themes"),
-            dlc: todosOsJogos.filter(j => obterPlataforma(j) === "dlc"),
-            updates: todosOsJogos.filter(j => obterPlataforma(j) === "updates")
+            ps5: todosOsJogos.filter(j => obterPlataforma(j) === "ps5" && obterTipo(j) === "game"),
+            ps4: todosOsJogos.filter(j => obterPlataforma(j) === "ps4" && obterTipo(j) === "game"),
+            ps3: todosOsJogos.filter(j => obterPlataforma(j) === "ps3" && obterTipo(j) === "game"),
+            pc: todosOsJogos.filter(j => obterPlataforma(j) === "pc" && obterTipo(j) === "game"),
+            
+            // Para as outras categorias, filtramos pelo TIPO
+            apps: todosOsJogos.filter(j => obterTipo(j) === "app" || obterTipo(j) === "emulator"),
+            themes: todosOsJogos.filter(j => obterTipo(j) === "theme"),
+            dlc: todosOsJogos.filter(j => obterTipo(j) === "dlc"),
+            updates: todosOsJogos.filter(j => obterTipo(j) === "update")
         };
 
-        // Renderiza todas as prateleiras se houver itens
-        if (grupos.emulators.length > 0) {
+        // Renderiza as prateleiras se houver itens
+        if (grupos.emulators && grupos.emulators.length > 0) {
             document.getElementById('prateleira-emulators').style.display = 'block';
             document.getElementById('lista-emulators').innerHTML = grupos.emulators.slice(0, 10).map(criarCard).join('');
+        } else {
+            // Caso não ache "emulators" diretamente, ele busca dentro dos apps
+            const emuladores = grupos.apps.filter(j => obterTipo(j) === "emulator");
+            if (emuladores.length > 0) {
+                document.getElementById('prateleira-emulators').style.display = 'block';
+                document.getElementById('lista-emulators').innerHTML = emuladores.slice(0, 10).map(criarCard).join('');
+            }
         }
+
         if (grupos.ps5.length > 0) {
             document.getElementById('prateleira-ps5').style.display = 'block';
             document.getElementById('lista-ps5').innerHTML = grupos.ps5.slice(0, 10).map(criarCard).join('');

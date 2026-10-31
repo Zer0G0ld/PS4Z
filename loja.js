@@ -41,8 +41,32 @@ async function iniciarLoja() {
     const container = document.getElementById('grid-jogos');
     const btnToggle = document.getElementById('btn-toggle-view');
 
-    // Filtra os jogos da plataforma correta
-    const jogosDaPlataforma = jogos.filter(j => obterPlataforma(j) === plataformaFiltro);
+    // --- AQUI ESTÁ A MÁGICA DA SEPARAÇÃO ---
+    let jogosDaPlataforma;
+
+    if (plataformaFiltro === 'apps') {
+        // Mostra apenas aplicativos
+        jogosDaPlataforma = jogos.filter(j => obterTipo(j) === "app");
+    } else if (plataformaFiltro === 'emulators') {
+        // Mostra apenas emuladores
+        jogosDaPlataforma = jogos.filter(j => obterTipo(j) === "emulator");
+    } else if (plataformaFiltro === 'themes') {
+        // Mostra apenas temas
+        jogosDaPlataforma = jogos.filter(j => obterTipo(j) === "theme");
+    } else if (plataformaFiltro === 'dlc') {
+        // Mostra apenas as DLCs
+        jogosDaPlataforma = jogos.filter(j => obterTipo(j) === "dlc");
+    } else if (plataformaFiltro === 'updates') {
+        // Mostra apenas Updates
+        jogosDaPlataforma = jogos.filter(j => obterTipo(j) === "update");
+    } else {
+        // Se for PS4, PC, etc., mostra apenas os JOGOS BASE (game)
+        jogosDaPlataforma = jogos.filter(j => 
+            obterPlataforma(j) === plataformaFiltro && 
+            obterTipo(j) === "game"
+        );
+    }
+    // ----------------------------------------
 
     // Função que desenha os cards
     function renderizar(jogosFiltrados) {
@@ -57,9 +81,10 @@ async function iniciarLoja() {
             const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/150';
             const idSeguro = encodeURIComponent(jogo.link);
             const plataforma = obterPlataforma(jogo);
+            const tipo = obterTipo(jogo);
 
             container.innerHTML += `
-                <a href="detalhes/detalhes.html?id=${idSeguro}" class="game-card ${plataforma}-card">
+                <a href="detalhes/detalhes.html?id=${idSeguro}" class="game-card ${plataforma}-card ${tipo}-card">
                     <div class="cover-wrapper">
                         <img src="${imagemCapa}" class="game-cover" onerror="this.style.display='none'; this.parentElement.style.background='#222'">
                     </div>

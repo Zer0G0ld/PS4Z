@@ -6,7 +6,6 @@ async function carregarDados(plataforma = '') {
         const isSubpasta = window.location.pathname.includes('/detalhes/');
         const basePath = isSubpasta ? '../data/' : 'data/';
 
-        // CORRIGIDO: O nome do arquivo de temas é DATA_THEMES.json
         const arquivos = [
             'DATA_GAMES.json',
             'DATA_APPS.json',
@@ -50,26 +49,18 @@ function formatarTamanho(bytes) {
     return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
 }
 
-// Função atualizada para identificar corretamente todas as categorias
+// Retorna a plataforma principal do jogo (ps4, pc, ps3, etc.)
 function obterPlataforma(jogo) {
-    if (!jogo || !jogo.name) return "ps4";
+    if (!jogo) return "ps4";
     
-    const nome = jogo.name.toLowerCase();
+    // 1. Usa a plataforma explícita se existir
+    if (jogo.platform) return jogo.platform.toLowerCase();
+
+    // 2. Fallback para os arquivos antigos
+    const nome = (jogo.name || "").toLowerCase();
     const regiao = (jogo.region || "").toUpperCase();
 
-    if (regiao === "APP" || nome.includes("[app]")) return "apps";
     if (regiao === "PC" || nome.includes("(pc)") || nome.includes("steam")) return "pc";
-    
-    // Identifica Temas
-    if (regiao === "THEME" || nome.includes("[theme]") || nome.includes("tema")) return "themes";
-    
-    // Identifica Emuladores (adicionei mais palavras-chave)
-    if (nome.includes("[emulador]") || nome.includes("[emulator]") || nome.includes("retroarch") || nome.includes("mgba") || nome.includes("emulador")) return "emulators";
-    
-    // Identifica DLCs e Updates
-    if (nome.includes("[dlc]") || nome.includes("dlc:")) return "dlc";
-    if (nome.includes("[update]") || nome.includes("update v") || nome.includes("patch")) return "updates";
-
     if (nome.includes("ps5")) return "ps5";
     if (nome.includes("ps3")) return "ps3";
     if (nome.includes("ps2")) return "ps2";
@@ -77,4 +68,23 @@ function obterPlataforma(jogo) {
     if (nome.includes("xbox")) return "xbox";
 
     return "ps4";
+}
+
+// Retorna o TIPO do conteúdo (game, app, dlc, update, theme, emulator)
+function obterTipo(jogo) {
+    if (!jogo) return "game";
+    
+    if (jogo.type) return jogo.type.toLowerCase();
+
+    // Fallback antigo (baseado na região ou nome)
+    const nome = (jogo.name || "").toLowerCase();
+    const regiao = (jogo.region || "").toUpperCase();
+
+    if (regiao === "APP" || nome.includes("[app]")) return "app";
+    if (regiao === "THEME" || nome.includes("[theme]")) return "theme";
+    if (nome.includes("[emulador]") || nome.includes("mgba")) return "emulator";
+    if (nome.includes("[dlc]") || nome.includes("dlc:")) return "dlc";
+    if (nome.includes("[update]") || nome.includes("patch")) return "update";
+
+    return "game";
 }

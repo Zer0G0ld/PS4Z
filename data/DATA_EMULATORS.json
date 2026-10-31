@@ -5,6 +5,8 @@
       "region": "USA",
       "name": "mGBA (Game Boy Advance)",
       "size": 12345678,
+      "platform": "ps4",
+      "type": "emulator",
       "version": "1.00",
       "release": "07-01-2025",
       "min_fw": "5.05",
