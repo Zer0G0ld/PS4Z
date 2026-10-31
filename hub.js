@@ -1,24 +1,20 @@
 // hub.js
 async function iniciarHome() {
-    // 1. Carrega TUDO de uma vez (o data.js busca o GAMES.json e o DATA_GAMES.json)
     const todosOsJogos = await carregarDados();
 
     if (todosOsJogos.length === 0) return;
 
     document.getElementById('loading').style.display = 'none';
 
-    // Referências aos elementos da tela
     const prateleirasContainer = document.querySelector('.prateleiras-container');
     const inputBusca = document.getElementById('busca');
     
-    // Cria um container para os resultados da busca (inicialmente escondido)
     const containerResultados = document.createElement('div');
     containerResultados.id = 'resultados-busca';
     containerResultados.className = 'loja-container grid-view';
-    containerResultados.style.display = 'none'; // Começa escondido
+    containerResultados.style.display = 'none';
     prateleirasContainer.parentNode.appendChild(containerResultados);
 
-    // 2. Função para criar o card (reutilizada)
     function criarCard(jogo) {
         const imagemCapa = jogo.cover_url || 'https://via.placeholder.com/150';
         const idSeguro = encodeURIComponent(jogo.link);
@@ -37,22 +33,28 @@ async function iniciarHome() {
         `;
     }
 
-    // 3. Renderiza as prateleiras (modo normal)
     function renderizarPrateleiras() {
-        // Limpa os resultados da busca
         containerResultados.innerHTML = '';
         containerResultados.style.display = 'none';
         prateleirasContainer.style.display = 'block';
 
-        // Agrupa e renderiza (igual ao código original)
         const grupos = {
             ps5: todosOsJogos.filter(j => obterPlataforma(j) === "ps5"),
             ps4: todosOsJogos.filter(j => obterPlataforma(j) === "ps4"),
             ps3: todosOsJogos.filter(j => obterPlataforma(j) === "ps3"),
             pc: todosOsJogos.filter(j => obterPlataforma(j) === "pc"),
-            apps: todosOsJogos.filter(j => obterPlataforma(j) === "apps")
+            apps: todosOsJogos.filter(j => obterPlataforma(j) === "apps"),
+            emulators: todosOsJogos.filter(j => obterPlataforma(j) === "emulators"),
+            themes: todosOsJogos.filter(j => obterPlataforma(j) === "themes"),
+            dlc: todosOsJogos.filter(j => obterPlataforma(j) === "dlc"),
+            updates: todosOsJogos.filter(j => obterPlataforma(j) === "updates")
         };
-        
+
+        // Renderiza todas as prateleiras se houver itens
+        if (grupos.emulators.length > 0) {
+            document.getElementById('prateleira-emulators').style.display = 'block';
+            document.getElementById('lista-emulators').innerHTML = grupos.emulators.slice(0, 10).map(criarCard).join('');
+        }
         if (grupos.ps5.length > 0) {
             document.getElementById('prateleira-ps5').style.display = 'block';
             document.getElementById('lista-ps5').innerHTML = grupos.ps5.slice(0, 10).map(criarCard).join('');
@@ -73,43 +75,41 @@ async function iniciarHome() {
             document.getElementById('prateleira-apps').style.display = 'block';
             document.getElementById('lista-apps').innerHTML = grupos.apps.slice(0, 10).map(criarCard).join('');
         }
+        if (grupos.themes.length > 0) {
+            document.getElementById('prateleira-themes').style.display = 'block';
+            document.getElementById('lista-themes').innerHTML = grupos.themes.slice(0, 10).map(criarCard).join('');
+        }
+        if (grupos.dlc.length > 0) {
+            document.getElementById('prateleira-dlc').style.display = 'block';
+            document.getElementById('lista-dlc').innerHTML = grupos.dlc.slice(0, 10).map(criarCard).join('');
+        }
+        if (grupos.updates.length > 0) {
+            document.getElementById('prateleira-updates').style.display = 'block';
+            document.getElementById('lista-updates').innerHTML = grupos.updates.slice(0, 10).map(criarCard).join('');
+        }
     }
 
-    // 4. Renderiza os resultados da busca (modo busca)
     function renderizarBusca(termo) {
-        // Esconde as prateleiras normais
         prateleirasContainer.style.display = 'none';
-        
-        // Filtra TODOS os jogos
-        const filtrados = todosOsJogos.filter(jogo => 
-            jogo.name.toLowerCase().includes(termo)
-        );
-
-        // Mostra o container de resultados
+        const filtrados = todosOsJogos.filter(jogo => jogo.name.toLowerCase().includes(termo));
         containerResultados.style.display = 'grid';
         
         if (filtrados.length === 0) {
-            containerResultados.innerHTML = '<p style="color: white; text-align: center; width: 100%;">Nenhum jogo encontrado.</p>';
+            containerResultados.innerHTML = '<p style="color: white; text-align: center; width: 100%;">Nenhum item encontrado.</p>';
             return;
         }
-
-        // Renderiza os resultados
         containerResultados.innerHTML = filtrados.map(criarCard).join('');
     }
 
-    // 5. Configura o evento de busca
     inputBusca.addEventListener('input', (e) => {
         const termo = e.target.value.toLowerCase().trim();
-        
         if (termo.length > 0) {
             renderizarBusca(termo);
         } else {
-            // Se limpar a busca, volta ao normal
             renderizarPrateleiras();
         }
     });
 
-    // 6. Inicia a tela com as prateleiras
     renderizarPrateleiras();
 }
 

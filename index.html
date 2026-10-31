@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header class="hub-header">
         <div class="logo">Zer0 Store</div>
@@ -19,6 +21,10 @@
             <a href="loja.html?p=psp">PSP</a>
             <a href="loja.html?p=xbox">XBOX</a>
             <a href="loja.html?p=apps">APP</a>
+            <a href="loja.html?p=themes" data-plataforma="themes">TEMAS</a>
+            <a href="loja.html?p=emulators" data-plataforma="emulators">EMULADORES</a>
+            <a href="loja.html?p=dlc" data-plataforma="dlc">DLCs</a>
+            <a href="loja.html?p=updates" data-plataforma="updates">UPDATES</a>
         </nav>
         <div class="header-actions">
             <a href="jb.html" class="btn-jb"><i class="fa-solid fa-bolt"></i> Desbloquear</a>
@@ -33,7 +39,7 @@
 
         <div id="loading" class="loading">Carregando catálogo...</div>
 
-        <div class="prateleiras-container">
+                <div class="prateleiras-container">
             <section class="prateleira" id="prateleira-ps5" style="display: none;">
                 <div class="prateleira-header">
                     <h2><i class="fa-brands fa-playstation"></i> PlayStation 5</h2>
@@ -65,13 +71,46 @@
                 </div>
                 <div class="scroll-horizontal" id="lista-pc"></div>
             </section>
-            
+
             <section class="prateleira" id="prateleira-apps" style="display: none;">
                 <div class="prateleira-header">
                     <h2><i class="fa-solid fa-screwdriver-wrench"></i> Ferramentas e Apps</h2>
                     <a href="loja.html?p=apps" class="ver-mais">Ver todos &rarr;</a>
                 </div>
                 <div class="scroll-horizontal" id="lista-apps"></div>
+            </section>
+
+            <!-- NOVAS PRATELEIRAS ADICIONADAS -->
+            <section class="prateleira" id="prateleira-emulators" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-solid fa-gamepad"></i> Emuladores</h2>
+                    <a href="loja.html?p=emulators" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-emulators"></div>
+            </section>
+
+            <section class="prateleira" id="prateleira-themes" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-solid fa-palette"></i> Temas Dinâmicos</h2>
+                    <a href="loja.html?p=themes" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-themes"></div>
+            </section>
+
+            <section class="prateleira" id="prateleira-dlc" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-solid fa-puzzle-piece"></i> DLCs</h2>
+                    <a href="loja.html?p=dlc" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-dlc"></div>
+            </section>
+
+            <section class="prateleira" id="prateleira-updates" style="display: none;">
+                <div class="prateleira-header">
+                    <h2><i class="fa-solid fa-arrow-up-from-bracket"></i> Updates</h2>
+                    <a href="loja.html?p=updates" class="ver-mais">Ver todos &rarr;</a>
+                </div>
+                <div class="scroll-horizontal" id="lista-updates"></div>
             </section>
         </div>
     </main>
@@ -81,11 +120,12 @@
             <div class="footer-logo">
                 Zer0 Store
             </div>
-            
+
             <div class="footer-links">
                 <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
                 <a href="jb.html"><i class="fa-solid fa-bolt"></i> Desbloqueio</a>
-                <a href="https://github.com/Zer0G0ld/Zer0-Store" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://github.com/Zer0G0ld/Zer0-Store" target="_blank"><i class="fa-brands fa-github"></i>
+                    GitHub</a>
             </div>
 
             <div class="footer-info">
@@ -100,4 +140,5 @@
     <script src="hub.js"></script>
     <script src="footer.js"></script>
 </body>
+
 </html>

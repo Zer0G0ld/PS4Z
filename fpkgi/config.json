@@ -9,7 +9,8 @@
       "Asia",
       "Europe",
       "Japan",
-      "USA"
+      "USA",
+      "APP"
     ]
   },
   "PREFERENCES": {
@@ -27,18 +28,18 @@
       "enableUpdates": true
     },
     "CONTENT_URLS": {
-      "PS1": null,
-      "PS2": null,
-      "PSP": null,
-      "PS5": null,
+      "PS1": "https://zer0g0ld.github.io/Zer0-Store/PS1.json",
+      "PS2": "https://zer0g0ld.github.io/Zer0-Store/PS2.json",
+      "PSP": "https://zer0g0ld.github.io/Zer0-Store/PSP.json",
+      "PS5": "https://zer0g0ld.github.io/Zer0-Store/PS5.json",
       "games": "https://zer0g0ld.github.io/Zer0-Store/GAMES.json",
       "apps": "https://zer0g0ld.github.io/Zer0-Store/APPS.json",
-      "updates": null,
-      "DLC": null,
-      "demos": null,
-      "homebrew": null,
-      "emulators": null,
-      "themes": null
+      "updates": "https://zer0g0ld.github.io/Zer0-Store/UPDATES.json",
+      "DLC": "https://zer0g0ld.github.io/Zer0-Store/DLC.json",
+      "demos": "https://zer0g0ld.github.io/Zer0-Store/DEMOS.json",
+      "homebrew": "https://zer0g0ld.github.io/Zer0-Store/HOMEBREW.json",
+      "emulators": "https://zer0g0ld.github.io/Zer0-Store/EMULATORS.json",
+      "themes": "https://zer0g0ld.github.io/Zer0-Store/THEMES.json"
     }
   }
 }
